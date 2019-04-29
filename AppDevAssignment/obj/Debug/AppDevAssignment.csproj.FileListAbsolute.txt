@@ -1,0 +1,10 @@
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\bin\Debug\AppDevAssignment.exe.config
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\bin\Debug\AppDevAssignment.exe
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\bin\Debug\AppDevAssignment.pdb
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.csprojAssemblyReference.cache
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.Form1.resources
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.Properties.Resources.resources
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.csproj.GenerateResource.cache
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.csproj.CoreCompileInputs.cache
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.exe
+D:\code\local\cSharp\source\repos\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.pdb
