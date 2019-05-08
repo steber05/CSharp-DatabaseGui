@@ -1,0 +1,11 @@
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\obj\Debug\HashTableGui.MainMenu.resources
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\obj\Debug\HashTableGui.Properties.Resources.resources
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\obj\Debug\AppDevAssignment.csproj.GenerateResource.cache
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\obj\Debug\AppDevAssignment.csproj.CoreCompileInputs.cache
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\obj\Debug\HashTableGui.exe
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\obj\Debug\HashTableGui.pdb
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\bin\Debug\HashTableGui.exe.config
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\bin\Debug\HashTableGui.exe
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\bin\Debug\HashTableGui.pdb
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\obj\Debug\HashTableGui.IndividualReports.resources
+D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\HashTableGui\obj\Debug\AppDevAssignment.csprojAssemblyReference.cache

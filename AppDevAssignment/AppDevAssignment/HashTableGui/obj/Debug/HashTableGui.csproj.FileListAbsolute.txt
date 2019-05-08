@@ -1,0 +1,10 @@
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\obj\Debug\HashTableGui.csprojAssemblyReference.cache
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\obj\Debug\HashTableGui.HashTableApplication.resources
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\obj\Debug\HashTableGui.Properties.Resources.resources
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\obj\Debug\HashTableGui.csproj.GenerateResource.cache
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\obj\Debug\HashTableGui.csproj.CoreCompileInputs.cache
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\bin\Debug\HashTableGui.exe.config
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\bin\Debug\HashTableGui.exe
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\bin\Debug\HashTableGui.pdb
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\obj\Debug\HashTableGui.exe
+D:\code\local\cSharp\source\repos\HashTableGui\HashTableGui\obj\Debug\HashTableGui.pdb
