@@ -35,6 +35,15 @@ namespace AppDevAssignment
             return false;
         }//end of amountOfMilk
 
+        public virtual int CalculateAge()
+        {
+            return 0;
+        }
+        public virtual double CalculateCost()
+        {
+            return 0;
+        }//end of overriden calculateAge
+
         public virtual bool IsRed()
         {
             return false;

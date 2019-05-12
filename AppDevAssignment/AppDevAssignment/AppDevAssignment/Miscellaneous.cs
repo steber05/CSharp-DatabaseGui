@@ -16,5 +16,10 @@ namespace AppDevAssignment
         {
             InitializeComponent();
         }
+
+        private void CowGoatMilkButton_Click(object sender, EventArgs e)
+        {
+            TaskCode.PrintIDToFile();
+        }
     }
 }

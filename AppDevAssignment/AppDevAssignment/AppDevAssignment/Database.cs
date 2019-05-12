@@ -32,13 +32,6 @@ namespace AppDevAssignment
 
             LiveStock animal;//temp animal for adding to hash table
 
-            //counts to keep track for creating seperate arrays
-            int jerseyCowCount = 0;
-            int cowCount = 0;
-            int dogCount = 0;
-            int goatCount = 0;
-            int sheepCount = 0;
-
             //establish connection to database
             connection.Open();
 
@@ -63,7 +56,8 @@ namespace AppDevAssignment
                                                Convert.ToDouble(reader["Amount of milk"]), Convert.ToBoolean(reader["Is Jersy"]));
 
                         allAnimals.Add(Convert.ToInt32(reader["id"]), animal);////add temp animal to hash table
-                        jerseyCowCount++;//increment counter for seperate arrays
+                        Auxilary.jerseyCowCount++;//increment counter for seperate arrays
+                        Auxilary.animalCount++;
                     }//end of jersey cows
                     else if (i == 0)//cows
                     {
@@ -74,7 +68,8 @@ namespace AppDevAssignment
                                          Convert.ToDouble(reader["Amount of milk"]), Convert.ToBoolean(reader["Is Jersy"]));
 
                         allAnimals.Add(Convert.ToInt32(reader["id"]), animal);//add temp animal to hash table
-                        cowCount++;//increment counter for seperate arrays
+                        Auxilary.cowCount++;//increment counter for seperate arrays
+                        Auxilary.animalCount++;
                     }//end of cows
                     else if (i == 1)//dogs
                     {
@@ -84,7 +79,8 @@ namespace AppDevAssignment
                                          Convert.ToInt32(reader["age"]), reader["color"].ToString());
                         //add temp animal to hash table
                         allAnimals.Add(Convert.ToInt32(reader["id"]), animal);
-                        dogCount++;//increment counter for seperate arrays
+                        Auxilary.dogCount++;//increment counter for seperate arrays
+                        Auxilary.animalCount++;
                     }//end of dogs
                     else if (i == 2)//goats
                     {
@@ -95,7 +91,8 @@ namespace AppDevAssignment
                                           Convert.ToDouble(reader["Amount of milk"]));
 
                         allAnimals.Add(Convert.ToInt32(reader["id"]), animal);//add temp animal to hash table
-                        goatCount++;//increment counter for seperate arrays
+                        Auxilary.goatCount++;//increment counter for seperate arrays
+                        Auxilary.animalCount++;
                     }//end of goats
                     else if (i == 3)//sheep
                     {
@@ -105,7 +102,8 @@ namespace AppDevAssignment
                                            Convert.ToDouble(reader["Amount of wool"]));
                         
                         allAnimals.Add(Convert.ToInt32(reader["id"]), animal);//add temp animal to hash table
-                        sheepCount++;//increment counter for seperate arrays
+                        Auxilary.sheepCount++;//increment counter for seperate arrays
+                        Auxilary.animalCount++;
                     }//end of sheep
                     else if (i == 4)//commodities
                     {
@@ -119,15 +117,17 @@ namespace AppDevAssignment
             connection.Close();
 
             //initialize auxilary arrays
-            Auxilary.jerseyCows = new LiveStock[jerseyCowCount];
-            Auxilary.cows = new LiveStock[cowCount];
-            Auxilary.dogs = new LiveStock[dogCount];
-            Auxilary.goats = new LiveStock[goatCount];
-            Auxilary.sheep = new LiveStock[sheepCount];
+            Auxilary.jerseyCows = new LiveStock[Auxilary.jerseyCowCount];
+            Auxilary.cows = new LiveStock[Auxilary.cowCount];
+            Auxilary.dogs = new LiveStock[Auxilary.dogCount];
+            Auxilary.goats = new LiveStock[Auxilary.goatCount];
+            Auxilary.sheep = new LiveStock[Auxilary.sheepCount];
+            Auxilary.allStock = new LiveStock[Auxilary.animalCount - Auxilary.dogCount];
+            int allStockCounter = 0;
             int genericCounter = 0;
             int jCowCounter = 0;
             //update auxilary arrays based on IDs. If ID structure changes it can be reflected here
-            for (int i = 1001; i < ((1001 + cowCount) + jerseyCowCount) + 50; i++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
+            for (int i = 1001; i < ((1001 + Auxilary.cowCount) + Auxilary.jerseyCowCount) + 50; i++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
             {
                 try
                 {
@@ -141,16 +141,21 @@ namespace AppDevAssignment
                 if (animal.IsJersey())
                 {
                     Auxilary.jerseyCows[jCowCounter] = animal;
+                    Auxilary.allStock[allStockCounter] = animal;
+                    allStockCounter++;
                     jCowCounter++;
+                    
                 }
                 else
                 {
                     Auxilary.cows[genericCounter] = animal;
+                    Auxilary.allStock[allStockCounter] = animal;
+                    allStockCounter++;
                     genericCounter++;
                 }
             }//end of jersey cows and cows
             genericCounter = 0;//reset counter
-            for (int j = 5000; j < (5000 + dogCount) + 50; j++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
+            for (int j = 5000; j < (5000 + Auxilary.dogCount) + 50; j++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
             {
                 try
                 {
@@ -164,7 +169,7 @@ namespace AppDevAssignment
                 genericCounter++;
             }//end of dogs
             genericCounter = 0;
-            for (int k = 1101; k < (1101 + goatCount) +50; k++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
+            for (int k = 1101; k < (1101 + Auxilary.goatCount) +50; k++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
             {
                 try
                 {
@@ -175,23 +180,43 @@ namespace AppDevAssignment
                     continue;
                 }
                 Auxilary.goats[genericCounter] = animal;
+                Auxilary.allStock[allStockCounter] = animal;
+                allStockCounter++;
                 genericCounter++;
             }//end of goats
             genericCounter = 0;
-            for (int l = 3001; l < (3001 + sheepCount) + 50; l++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
+            for (int l = 3001; l < (3001 + Auxilary.sheepCount) + 50; l++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
             {
                 try
                 {
                     animal = allAnimals[l];
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     continue;
                 }
                 Auxilary.sheep[genericCounter] = animal;
+                Auxilary.allStock[allStockCounter] = animal;
+                allStockCounter++;
                 genericCounter++;
             }//end of sheep loop reminder to add the id 0
             Auxilary.sheep[genericCounter] = allAnimals[0];//bad database design based on ID structure
+            Auxilary.allStock[allStockCounter] = allAnimals[0];
+
+            //sort allStock array
+            LiveStock tempStock;
+            for (int i = 0; i < Auxilary.allStock.Length; i++)
+            {
+                for (int j = 0; j < Auxilary.allStock.Length - 1; j++)
+                {
+                    if (Auxilary.allStock[j].CalculateAge() < Auxilary.allStock[j + 1].CalculateProfit())
+                    {
+                        tempStock = Auxilary.allStock[j + 1];
+                        Auxilary.allStock[j + 1] = Auxilary.allStock[j];
+                        Auxilary.allStock[j] = tempStock;
+                    }
+                }
+            }
         }//end of initializeDatabase
     }//end of class Database
 }//end of namespace

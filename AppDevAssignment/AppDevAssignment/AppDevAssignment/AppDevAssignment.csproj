@@ -85,6 +85,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Sheep.cs" />
+    <Compile Include="TaskCode.cs" />
     <EmbeddedResource Include="IndividualReports.resx">
       <DependentUpon>IndividualReports.cs</DependentUpon>
     </EmbeddedResource>

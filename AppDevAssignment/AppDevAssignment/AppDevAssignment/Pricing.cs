@@ -8,11 +8,11 @@ namespace AppDevAssignment
 {
     class Pricing
     {
-        public static double goatMilkPrice;
-        public static double cowMilkPrice;
-        public static double sheepWoolPrice;
-        public static double waterPrice;
-        public static double generalTax;
-        public static double jerseyCowTax;
+        public static double goatMilkPrice = 0;
+        public static double cowMilkPrice = 0;
+        public static double sheepWoolPrice = 0;
+        public static double waterPrice = 0;
+        public static double generalTax = 0;
+        public static double jerseyCowTax = 0;
     }
 }

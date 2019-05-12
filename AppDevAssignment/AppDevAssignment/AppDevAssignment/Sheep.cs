@@ -36,14 +36,19 @@ namespace AppDevAssignment
 
         public override double CalculateProfit()
         {
-            double profit = (wool * Pricing.sheepWoolPrice) - (water * Pricing.waterPrice);
+            double profit = (wool * Pricing.sheepWoolPrice) - (water * (Pricing.waterPrice / 365));
             return profit;
         }//end of overviden calculateProfit
 
-        public override double AmountOfMilk()
+        public override int CalculateAge()
         {
-            return 0;
-        }//end of overriden amountOfMilk
+            return this.age;
+        }//end of overriden calculateAge
+
+        public override double CalculateCost()
+        {
+            return this.cost;
+        }//end of overriden calculateAge
 
         public override bool IsRed()
         {

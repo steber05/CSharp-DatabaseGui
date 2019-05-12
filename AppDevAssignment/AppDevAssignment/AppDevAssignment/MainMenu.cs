@@ -17,9 +17,8 @@ namespace AppDevAssignment
             InitializeComponent();
         }
         
-        public static bool InitializeFile()//Make a connection to the database and store relevant objects in hash table and update Pricing class
+        public static void InitializeFile()//Make a connection to the database and store relevant objects in hash table and update Pricing class
         {
-            bool databasePassed = false;
             OpenFileDialog file = new OpenFileDialog();
             file.Title = "Choose database file";
             file.Filter = "All files | *.*";
@@ -34,17 +33,15 @@ namespace AppDevAssignment
                     MessageBox.Show("\tError!\n" + ex.Message);
                     InitializeFile();
                 }
-                databasePassed = true;
+                Database.databasePassed = true;
             }
-            return databasePassed;
         }
 
         private void ConnectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(InitializeFile())
-            {
-                Database.databasePassed = true;
-            }
+            this.Cursor = Cursors.WaitCursor;
+            InitializeFile();
+            this.Cursor = Cursors.Default;
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)

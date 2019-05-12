@@ -32,15 +32,15 @@ namespace AppDevAssignment
                             "\nColour: " + colour);
         }//end of overriden displayInfo
 
-        public override double CalculateProfit()
+        public override double CalculateCost()
         {
-            return 0;
-        }//end of overviden calculateProfit
+            return this.cost;
+        }//end of overriden calculateAge
 
-        public override double AmountOfMilk()
+        public override int CalculateAge()
         {
-            return 0;
-        }//end of overriden amountOfMilk
+            return this.age;
+        }//end of overriden calculateAge
 
         public override bool IsRed()
         {
