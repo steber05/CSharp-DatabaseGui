@@ -156,5 +156,33 @@ namespace AppDevAssignment
                 }
             }
         }
+
+        public static void calculateAllRed()
+        {
+            int amountOfRed =0;
+            int ratio = 0;
+
+            //loop through and find all red animals
+            for(int i=0;i<Auxilary.allStock.Length;i++)
+            {
+                if(Auxilary.allStock[i].IsRed())
+                {
+                    amountOfRed++;
+                }
+            }
+            for(int j=0;j<Auxilary.dogs.Length;j++)
+            {
+                if(Auxilary.dogs[j].IsRed())
+                {
+                    amountOfRed++;
+                }
+            }
+
+            //calculate ratio
+            ratio = amountOfRed / Auxilary.animalCount;
+
+            MessageBox.Show("Red animal ratio\n" + "--------------\n" + "%" + 
+                            ratio.ToString() + " of animals are red");
+        }
     }
 }
