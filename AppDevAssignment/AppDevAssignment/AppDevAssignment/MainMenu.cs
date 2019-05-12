@@ -36,7 +36,6 @@ namespace AppDevAssignment
                 }
                 databasePassed = true;
             }
-            MessageBox.Show(Pricing.goatMilkPrice.ToString());
             return databasePassed;
         }
 
@@ -53,9 +52,16 @@ namespace AppDevAssignment
             Application.Exit();
         }
 
+        
+
+        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void IndividualReportsForm_Click(object sender, EventArgs e)
         {
-            if(Database.databasePassed)
+            if (Database.databasePassed)
             {
                 AppForms.individualReport.Show();
                 this.Hide();
@@ -67,9 +73,18 @@ namespace AppDevAssignment
             }
         }
 
-        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        private void MiscellaneousForm_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (Database.databasePassed)
+            {
+                AppForms.miscellaneous.Show();
+                this.Hide();
+                AppForms.mainMenuVisible = false;
+            }
+            else
+            {
+                MessageBox.Show("Please connect to database first\n\t  Press F4");
+            }
         }
     }
 }

@@ -11,5 +11,6 @@ namespace AppDevAssignment
         public static bool mainMenuVisible;
         public static MainMenu mainMenu = new MainMenu();
         public static IndividualReports individualReport = new IndividualReports();
+        public static Miscellaneous miscellaneous = new Miscellaneous();
     }
 }

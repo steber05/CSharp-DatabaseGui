@@ -27,16 +27,32 @@ namespace AppDevAssignment
             this.milk = milk;
         }//end of constructor
 
-        public override void calculateProfit()
+        public override void DisplayInfo()
         {
-
-        }//end of overviden calculateProfit
-
-		public override void displayInfo()
-		{
             MessageBox.Show("Goat details\n--------\nID: " + id + "\nAmount of water: " + water +
                             "\nDaily cost: " + cost + "\nWeight: " + weight + "\nAge: " + age +
                             "\nColour: " + colour + "\nAmount of milk: " + milk);
-        }
-	}
+        }//end of overriden displayInfo
+
+        public override double CalculateProfit()
+        {
+            double profit = (milk * Pricing.cowMilkPrice) - (water * Pricing.waterPrice);
+            return profit;
+        }//end of overviden calculateProfit
+        public override double AmountOfMilk()
+        {
+            return this.milk;
+        }//end of overriden amountOfMilk
+
+        public override bool IsRed()
+        {
+            bool red = false;
+
+            if (this.colour == "red") red = true;
+            else red = false;
+
+            return red;
+        }//end of overriden isRed
+
+    }
 }

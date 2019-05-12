@@ -16,13 +16,28 @@ namespace AppDevAssignment
             this.id = id;
         }//end of constructor
 
-        public virtual void calculateProfit()
+        public virtual void DisplayInfo()
         {
+        }//end of displayInfo
+
+        public virtual double CalculateProfit()
+        {
+            return 0;
         }//end of default calculateProfit
 
-		public virtual void displayInfo()
-		{
+        public virtual double AmountOfMilk()
+        {
+            return 0;
+        }//end of amountOfMilk
 
-		}
+        public virtual bool IsJersey()
+        {
+            return false;
+        }//end of amountOfMilk
+
+        public virtual bool IsRed()
+        {
+            return false;
+        }//end of isRed
 	}
 }

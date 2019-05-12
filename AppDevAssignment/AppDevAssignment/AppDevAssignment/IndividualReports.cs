@@ -24,7 +24,7 @@ namespace AppDevAssignment
             try
             {
                 animal = Database.allAnimals[Convert.ToInt32(idTextBox.Text)];
-                animal.displayInfo();
+                animal.DisplayInfo();
             }
             catch (Exception)
             {

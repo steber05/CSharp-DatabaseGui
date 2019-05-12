@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppForms.cs" />
+    <Compile Include="Auxilary.cs" />
     <Compile Include="Cow.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Dog.cs" />
@@ -69,6 +70,12 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Miscellaneous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous.Designer.cs">
+      <DependentUpon>Miscellaneous.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pricing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miscellaneous.resx">
+      <DependentUpon>Miscellaneous.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

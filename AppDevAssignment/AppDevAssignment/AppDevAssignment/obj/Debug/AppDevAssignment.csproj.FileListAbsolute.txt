@@ -21,3 +21,15 @@ D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDe
 D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.csproj.CoreCompileInputs.cache
 D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.exe
 D:\code\local\cSharp\source\repos\wintec\AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.pdb
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\bin\Debug\AppDevAssignment.exe.config
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\bin\Debug\AppDevAssignment.exe
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\bin\Debug\AppDevAssignment.pdb
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.IndividualReports.resources
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.MainMenu.resources
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.Properties.Resources.resources
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.csproj.GenerateResource.cache
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.csproj.CoreCompileInputs.cache
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.exe
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.pdb
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.Miscellaneous.resources
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.csprojAssemblyReference.cache

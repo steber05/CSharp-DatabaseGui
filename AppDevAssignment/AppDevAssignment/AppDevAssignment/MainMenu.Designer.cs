@@ -34,15 +34,15 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.individualReportsForm = new System.Windows.Forms.PictureBox();
+            this.miscellaneousForm = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.individualReportsForm = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.individualReportsForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.miscellaneousForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.individualReportsForm)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -88,21 +88,22 @@
             this.connectToolStripMenuItem.Text = "Connect";
             this.connectToolStripMenuItem.Click += new System.EventHandler(this.ConnectToolStripMenuItem_Click);
             // 
-            // individualReportsForm
+            // miscellaneousForm
             // 
-            this.individualReportsForm.Image = ((System.Drawing.Image)(resources.GetObject("individualReportsForm.Image")));
-            this.individualReportsForm.Location = new System.Drawing.Point(312, 241);
-            this.individualReportsForm.Name = "individualReportsForm";
-            this.individualReportsForm.Size = new System.Drawing.Size(232, 173);
-            this.individualReportsForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.individualReportsForm.TabIndex = 1;
-            this.individualReportsForm.TabStop = false;
-            this.individualReportsForm.Click += new System.EventHandler(this.IndividualReportsForm_Click);
+            this.miscellaneousForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.miscellaneousForm.Image = ((System.Drawing.Image)(resources.GetObject("miscellaneousForm.Image")));
+            this.miscellaneousForm.Location = new System.Drawing.Point(312, 241);
+            this.miscellaneousForm.Name = "miscellaneousForm";
+            this.miscellaneousForm.Size = new System.Drawing.Size(232, 173);
+            this.miscellaneousForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.miscellaneousForm.TabIndex = 1;
+            this.miscellaneousForm.TabStop = false;
+            this.miscellaneousForm.Click += new System.EventHandler(this.MiscellaneousForm_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 40);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 241);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(232, 173);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,27 +120,28 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
+            // individualReportsForm
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(12, 241);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(232, 173);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.individualReportsForm.Image = ((System.Drawing.Image)(resources.GetObject("individualReportsForm.Image")));
+            this.individualReportsForm.Location = new System.Drawing.Point(12, 40);
+            this.individualReportsForm.Name = "individualReportsForm";
+            this.individualReportsForm.Size = new System.Drawing.Size(232, 173);
+            this.individualReportsForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.individualReportsForm.TabIndex = 4;
+            this.individualReportsForm.TabStop = false;
+            this.individualReportsForm.Click += new System.EventHandler(this.IndividualReportsForm_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 450);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.individualReportsForm);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.individualReportsForm);
+            this.Controls.Add(this.miscellaneousForm);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainMenu";
@@ -148,10 +150,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.individualReportsForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.miscellaneousForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.individualReportsForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,9 +166,9 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
-        private System.Windows.Forms.PictureBox individualReportsForm;
+        private System.Windows.Forms.PictureBox miscellaneousForm;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox individualReportsForm;
     }
 }

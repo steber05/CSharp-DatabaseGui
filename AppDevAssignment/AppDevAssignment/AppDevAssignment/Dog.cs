@@ -25,16 +25,33 @@ namespace AppDevAssignment
             this.colour = colour;
         }//end of constructor
 
-        public override void calculateProfit()
+        public override void DisplayInfo()
         {
-        }//end of overviden calculateProfit
-
-		public override void displayInfo()
-		{
             MessageBox.Show("Jersey cow details\n--------\nID: " + id + "\nAmount of water: " + water +
                             "\nDaily cost: " + cost + "\nWeight: " + weight + "\nAge: " + age +
                             "\nColour: " + colour);
-        }
-	}
+        }//end of overriden displayInfo
+
+        public override double CalculateProfit()
+        {
+            return 0;
+        }//end of overviden calculateProfit
+
+        public override double AmountOfMilk()
+        {
+            return 0;
+        }//end of overriden amountOfMilk
+
+        public override bool IsRed()
+        {
+            bool red = false;
+
+            if (this.colour == "red") red = true;
+            else red = false;
+
+            return red;
+        }//end of overriden isRed
+
+    }
 }
 
