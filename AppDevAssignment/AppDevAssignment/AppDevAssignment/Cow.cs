@@ -67,7 +67,7 @@ namespace AppDevAssignment
         {
             bool red = false;
 
-            if (this.colour == "red") red = true;
+            if (this.colour.ToLower() == "red") red = true;
             else red = false;
 
             return red;

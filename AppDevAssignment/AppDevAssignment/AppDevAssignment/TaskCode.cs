@@ -179,10 +179,11 @@ namespace AppDevAssignment
             }
 
             //calculate ratio
-            ratio = amountOfRed / Auxilary.animalCount;
+            ratio =  Auxilary.animalCount / amountOfRed;
 
-            MessageBox.Show("Red animal ratio\n" + "--------------\n" + "%" + 
-                            ratio.ToString() + " of animals are red");
+            MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxilary.animalCount.ToString() +
+                            "\nNumber of red animals\n" + "-----------------------------\n" + amountOfRed.ToString() +
+                            "\nRed animal ratio\n" + "-----------------------------\n" + "%" + ratio.ToString() + " of animals are red");
         }
     }
 }
