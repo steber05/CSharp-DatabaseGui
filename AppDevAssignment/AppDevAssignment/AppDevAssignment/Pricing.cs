@@ -14,5 +14,6 @@ namespace AppDevAssignment
         public static double waterPrice = 0;
         public static double generalTax = 0;
         public static double jerseyCowTax = 0;
+        public static double totalProfit = 0;
     }
 }

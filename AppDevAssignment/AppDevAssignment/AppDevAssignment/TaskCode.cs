@@ -10,7 +10,31 @@ namespace AppDevAssignment
 {
     class TaskCode
     {
+        //Task 2 Display the total profitability/loose of the farm per day
+        public static void TotalDailyProfitLoss()
+        {
+            double totalProfit = 0;
 
+            for(int i=0;i<Auxiliary.allStock.Length;i++)
+            {
+                totalProfit += Auxiliary.allStock[i].CalculateProfit() / 365;
+            }
+
+            MessageBox.Show("Total daily profit/loss\n" + "---------------------\n" + totalProfit.ToString());
+        }
+
+        //Task 3 Display the total tax paid to the government per month 
+        public static void CalculateMonthlyTax()
+        {
+            double tax = 0;
+
+            for (int i = 0; i < Auxiliary.allStock.Length; i++)
+            {
+                tax += Auxiliary.allStock[i].CalculateTax() / 12;
+            }
+
+            MessageBox.Show("Tax per month\n" + "---------------------\n$" + tax.ToString());
+        }
 
         //Task 4 Display the total amount of milk per day for goats and cows
         public static void CalculateGoatCowMilk()
@@ -18,17 +42,17 @@ namespace AppDevAssignment
             double goatCowMilk = 0;
 
             //loop through all cows and goats and collect amountOfMilk
-            for (int i = 0; i < Auxilary.jerseyCows.Length; i++)
+            for (int i = 0; i < Auxiliary.jerseyCows.Length; i++)
             {
-                goatCowMilk += Auxilary.jerseyCows[i].AmountOfMilk();
+                goatCowMilk += Auxiliary.jerseyCows[i].AmountOfMilk();
             }
-            for (int j = 0; j < Auxilary.cows.Length; j++)
+            for (int j = 0; j < Auxiliary.cows.Length; j++)
             {
-                goatCowMilk += Auxilary.cows[j].AmountOfMilk();
+                goatCowMilk += Auxiliary.cows[j].AmountOfMilk();
             }
-            for (int k = 0; k < Auxilary.goats.Length; k++)
+            for (int k = 0; k < Auxiliary.goats.Length; k++)
             {
-                goatCowMilk += Auxilary.goats[k].AmountOfMilk();
+                goatCowMilk += Auxiliary.goats[k].AmountOfMilk();
             }
 
             //display amount of milk for all cows and goats
@@ -42,24 +66,24 @@ namespace AppDevAssignment
             int avgAge = 0;
 
             //loop through all animals except dogs
-            for (int i = 0; i < Auxilary.jerseyCows.Length; i++)
+            for (int i = 0; i < Auxiliary.jerseyCows.Length; i++)
             {
-                ages += Auxilary.jerseyCows[i].CalculateAge();
+                ages += Auxiliary.jerseyCows[i].age;
             }
-            for (int j = 0; j < Auxilary.cows.Length; j++)
+            for (int j = 0; j < Auxiliary.cows.Length; j++)
             {
-                ages += Auxilary.cows[j].CalculateAge();
+                ages += Auxiliary.cows[j].age;
             }
-            for (int k = 0; k < Auxilary.goats.Length; k++)
+            for (int k = 0; k < Auxiliary.goats.Length; k++)
             {
-                ages += Auxilary.goats[k].CalculateAge();
+                ages += Auxiliary.goats[k].age;
             }
-            for (int l = 0; l < Auxilary.sheep.Length; l++)
+            for (int l = 0; l < Auxiliary.sheep.Length; l++)
             {
-                ages += Auxilary.sheep[l].CalculateAge();
+                ages += Auxiliary.sheep[l].age;
             }
 
-            avgAge = ages / (Auxilary.animalCount - Auxilary.dogCount);
+            avgAge = ages / (Auxiliary.animalCount - Auxiliary.dogCount);
 
             //display amount of milk for all cows and goats
             MessageBox.Show("Average age\n" + "---------------------\n" + avgAge.ToString());
@@ -76,25 +100,25 @@ namespace AppDevAssignment
             double avgSheepProfit = 0;
 
             //loop through all cows and goats and collect amountOfMilk
-            for (int i = 0; i < Auxilary.jerseyCows.Length; i++)
+            for (int i = 0; i < Auxiliary.jerseyCows.Length; i++)
             {
-                jerseyCowProfit += Auxilary.jerseyCows[i].CalculateProfit();
+                jerseyCowProfit += Auxiliary.jerseyCows[i].CalculateProfit();
             }
-            for (int j = 0; j < Auxilary.cows.Length; j++)
+            for (int j = 0; j < Auxiliary.cows.Length; j++)
             {
-                cowProfit += Auxilary.cows[j].CalculateProfit();
+                cowProfit += Auxiliary.cows[j].CalculateProfit();
             }
-            for (int k = 0; k < Auxilary.goats.Length; k++)
+            for (int k = 0; k < Auxiliary.goats.Length; k++)
             {
-                goatProfit += Auxilary.goats[k].CalculateProfit();
+                goatProfit += Auxiliary.goats[k].CalculateProfit();
             }
-            for (int l = 0; l < Auxilary.sheep.Length; l++)
+            for (int l = 0; l < Auxiliary.sheep.Length; l++)
             {
-                sheepProfit += Auxilary.sheep[l].CalculateProfit();
+                sheepProfit += Auxiliary.sheep[l].CalculateProfit();
             }
 
-            avgCowGoatProfit = (jerseyCowProfit + cowProfit + goatProfit) / (Auxilary.jerseyCowCount + Auxilary.cowCount + Auxilary.goatCount);
-            avgSheepProfit = sheepProfit / Auxilary.sheepCount;
+            avgCowGoatProfit = (jerseyCowProfit + cowProfit + goatProfit) / (Auxiliary.jerseyCowCount + Auxiliary.cowCount + Auxiliary.goatCount);
+            avgSheepProfit = sheepProfit / Auxiliary.sheepCount;
 
             //display amount of milk for all cows and goats
             MessageBox.Show("Average cow/goat profit\n" + "--------------------------------\n" + avgCowGoatProfit.ToString() +
@@ -104,29 +128,29 @@ namespace AppDevAssignment
         //Task 7 Display the ratio of Dogs’ cost compared to the total cost
         public static void CalculateCostDifference()
         {
-            double animalCosts = 0;
+            double animalCosts = 0;//all animals except dogs
             double dogCosts = 0;
             double ratio = 0;
 
-            for (int i = 0; i < Auxilary.jerseyCows.Length; i++)
+            for (int i = 0; i < Auxiliary.jerseyCows.Length; i++)
             {
-                animalCosts += Auxilary.jerseyCows[i].CalculateCost();
+                animalCosts += Auxiliary.jerseyCows[i].cost;
             }
-            for (int j = 0; j < Auxilary.cows.Length; j++)
+            for (int j = 0; j < Auxiliary.cows.Length; j++)
             {
-                animalCosts += Auxilary.cows[j].CalculateCost();
+                animalCosts += Auxiliary.cows[j].cost;
             }
-            for (int k = 0; k < Auxilary.goats.Length; k++)
+            for (int k = 0; k < Auxiliary.goats.Length; k++)
             {
-                animalCosts += Auxilary.goats[k].CalculateCost(); ;
+                animalCosts += Auxiliary.goats[k].cost;
             }
-            for (int l = 0; l < Auxilary.sheep.Length; l++)
+            for (int l = 0; l < Auxiliary.sheep.Length; l++)
             {
-                animalCosts += Auxilary.sheep[l].CalculateCost();
+                animalCosts += Auxiliary.sheep[l].cost;
             }
-            for (int m = 0; m < Auxilary.dogs.Length; m++)
+            for (int m = 0; m < Auxiliary.dogs.Length; m++)
             {
-                dogCosts += Auxilary.dogs[m].CalculateCost();
+                dogCosts += Auxiliary.dogs[m].cost;
             }
 
             ratio = animalCosts / dogCosts;
@@ -149,41 +173,94 @@ namespace AppDevAssignment
                 using (StreamWriter writer = new StreamWriter(file.FileName))
                 {
                     writer.WriteLine("ID ordered by profit (Highest to lowest)\n----------------------------------------");
-                    for (int i = 0; i < Auxilary.allStock.Length; i++)
+                    for (int i = 0; i < Auxiliary.allStock.Length; i++)
                     {
-                        writer.Write(Auxilary.allStock[i].CalculateAge() + "\n");
+                        writer.Write(Auxiliary.allStock[i].id + "\n");
                     }
                 }
             }
         }
 
-        public static void calculateAllRed()
+        //Task 9 Display the ratio of livestock with the color red 
+        public static void CalculateAllRed()
         {
-            int amountOfRed =0;
+            int amountOfRed = 0;
             int ratio = 0;
 
             //loop through and find all red animals
-            for(int i=0;i<Auxilary.allStock.Length;i++)
+            for (int i = 0; i < Auxiliary.allStock.Length; i++)
             {
-                if(Auxilary.allStock[i].IsRed())
+                if (Auxiliary.allStock[i].IsRed())
                 {
                     amountOfRed++;
                 }
             }
-            for(int j=0;j<Auxilary.dogs.Length;j++)
+            for (int j = 0; j < Auxiliary.dogs.Length; j++)
             {
-                if(Auxilary.dogs[j].IsRed())
+                if (Auxiliary.dogs[j].IsRed())
                 {
                     amountOfRed++;
                 }
             }
 
             //calculate ratio
-            ratio =  Auxilary.animalCount / amountOfRed;
+            ratio = Auxiliary.animalCount / amountOfRed;
 
-            MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxilary.animalCount.ToString() +
+            MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxiliary.animalCount.ToString() +
                             "\nNumber of red animals\n" + "-----------------------------\n" + amountOfRed.ToString() +
                             "\nRed animal ratio\n" + "-----------------------------\n" + "%" + ratio.ToString() + " of animals are red");
         }
+
+        //Task 10 Display the total tax paid for Jersey Cows
+        public static void jerseyCowTax()
+        {
+            double jerseyCowTax = 0;
+
+            for (int i = 0; i < Auxiliary.jerseyCows.Length; i++)
+            {
+                jerseyCowTax += Pricing.jerseyCowTax * Auxiliary.jerseyCowCount;
+            }
+
+            MessageBox.Show(jerseyCowTax.ToString());
+        }
+
+        //Task 11 The user enter a threshold (number of years), and the program displays the ratio of 
+        //the number of animal farm where the age is above this threshold.
+        public static void DisplayAgesAbove(int num)
+        {
+            int aboveAge = 0;
+
+            for (int i = 0; i < Auxiliary.allStock.Length; i++)
+            {
+                if (Auxiliary.allStock[i].age >= num)
+                {
+                    aboveAge++;
+                }
+            }
+            for (int j = 0; j < Auxiliary.dogs.Length; j++)
+            {
+                if (Auxiliary.dogs[j].age >= num)
+                {
+                    aboveAge++;
+                }
+            }
+
+            MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxiliary.animalCount.ToString() +
+                            "\nNumber of animals above the age of: " + num.ToString() + "\n" + "-----------------------------\n" + aboveAge.ToString());
+        }
+
+        //Task 12 Display the total profitability of all Jersey Cows.
+        public static void JerseyCowProfit()
+        {
+            double jerseyCowProfit = 0;
+            for (int i = 0; i < Auxiliary.jerseyCows.Length; i++)
+            {
+                jerseyCowProfit += Auxiliary.jerseyCows[i].CalculateProfit();
+            }
+
+            MessageBox.Show("Total jersey cow profit\n" + "---------------------\n$" + jerseyCowProfit.ToString());
+        }
+
+
     }
 }

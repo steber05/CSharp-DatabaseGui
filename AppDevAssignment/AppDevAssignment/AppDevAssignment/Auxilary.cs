@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppDevAssignment
 {
-    class Auxilary
+    class Auxiliary
     {
         //counts to keep track of each seperate animal
         public static int jerseyCowCount = 0;
@@ -21,6 +21,6 @@ namespace AppDevAssignment
         public static LiveStock[] dogs;
         public static LiveStock[] goats;
         public static LiveStock[] sheep;
-        public static LiveStock[] allStock;        
+        public static LiveStock[] allStock;
     }
 }

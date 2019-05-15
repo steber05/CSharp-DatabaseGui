@@ -10,10 +10,20 @@ namespace AppDevAssignment
     class LiveStock
     {
         public int id { get; set; }
+        public double water { get; set; }
+        public double cost { get; set; }
+        public double weight { get; set; }
+        public int age { get; set; }
+        public string colour { get; set; }
         //end of getter setter
-        public LiveStock(int id)
+        public LiveStock(int id, double water, double cost, double weight, int age, string colour)
         {
             this.id = id;
+            this.water = water;
+            this.cost = cost;
+            this.weight = weight;
+            this.age = age;
+            this.colour = colour;
         }//end of constructor
 
         public virtual void DisplayInfo()
@@ -25,6 +35,11 @@ namespace AppDevAssignment
             return 0;
         }//end of default calculateProfit
 
+        public virtual double CalculateTax()
+        {
+            return 0;
+        }//end of default calculateTax
+
         public virtual double AmountOfMilk()
         {
             return 0;
@@ -34,15 +49,6 @@ namespace AppDevAssignment
         {
             return false;
         }//end of amountOfMilk
-
-        public virtual int CalculateAge()
-        {
-            return 0;
-        }
-        public virtual double CalculateCost()
-        {
-            return 0;
-        }//end of overriden calculateAge
 
         public virtual bool IsRed()
         {

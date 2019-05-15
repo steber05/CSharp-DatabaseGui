@@ -19,7 +19,7 @@ namespace AppDevAssignment
 
         private void CowGoatMilkButton_Click(object sender, EventArgs e)
         {
-            TaskCode.calculateAllRed();
+            TaskCode.PrintIDToFile();
         }
     }
 }

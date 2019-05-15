@@ -9,15 +9,10 @@ namespace AppDevAssignment
 {
     class Cow : LiveStock
     {
-        public double water { get; set; }
-        public double cost { get; set; }
-        public double weight { get; set; }
-        public int age { get; set; }
-        public string colour { get; set; }
         public double milk { get; set; }
         bool jersey { get; set; }
         //end of getter setters
-        public Cow(int id, double water, double cost, double weight, int age, string colour, double milk, bool jersey) : base(id)
+        public Cow(int id, double water, double cost, double weight, int age, string colour, double milk, bool jersey) : base(id, water, cost, weight, age, colour)
         {
 			this.id = id;
             this.water = water;
@@ -38,10 +33,19 @@ namespace AppDevAssignment
 
         public override double CalculateProfit()
         {
-            double profit = (milk * Pricing.cowMilkPrice) - (water * (Pricing.waterPrice / 365));
-            profit = 1000;
+            double profit = 0;
+            profit += milk * (Pricing.cowMilkPrice * 365);
+            profit -= water * Pricing.waterPrice;
+            profit -= Pricing.generalTax * weight;
             return profit;
         }//end of overriden calculateProfit
+
+        public override double CalculateTax()
+        {
+            double tax = 0;
+            tax += Pricing.generalTax * weight;
+            return tax;
+        }//end of overriden calculateTax
 
         public override double AmountOfMilk()
         {
@@ -52,16 +56,6 @@ namespace AppDevAssignment
         {
             return this.jersey;
         }//end of overriden isJersey
-
-        public override int CalculateAge()
-        {
-            return this.age;
-        }//end of overriden calculateAge
-
-        public override double CalculateCost()
-        {
-            return this.cost;
-        }//end of overriden calculateAge
 
         public override bool IsRed()
         {
