@@ -10,6 +10,7 @@ namespace AppDevAssignment
 {
     class TaskCode
     {
+
         //Task 2 Display the total profitability/loose of the farm per day
         public static void TotalDailyProfitLoss()
         {
@@ -21,7 +22,7 @@ namespace AppDevAssignment
             }
 
             MessageBox.Show("Total daily profit/loss\n" + "---------------------\n" + totalProfit.ToString());
-        }
+        }//end of Task 2
 
         //Task 3 Display the total tax paid to the government per month 
         public static void CalculateMonthlyTax()
@@ -34,7 +35,7 @@ namespace AppDevAssignment
             }
 
             MessageBox.Show("Tax per month\n" + "---------------------\n$" + tax.ToString());
-        }
+        }//end of Task 3
 
         //Task 4 Display the total amount of milk per day for goats and cows
         public static void CalculateGoatCowMilk()
@@ -57,7 +58,7 @@ namespace AppDevAssignment
 
             //display amount of milk for all cows and goats
             MessageBox.Show("Cow and goat milk\n" + "---------------------\n" + goatCowMilk.ToString());
-        }
+        }//end of Task 4
 
         //task 5 Display the average age of all animal farms(dog excluded)
         public static void CalculateAvgAge()
@@ -87,7 +88,7 @@ namespace AppDevAssignment
 
             //display amount of milk for all cows and goats
             MessageBox.Show("Average age\n" + "---------------------\n" + avgAge.ToString());
-        }
+        }//end of Task 5
 
         //Task 6 Display the average profitability of “Goats and Cow” Vs. Sheep
         public static void CalculateProfitDifference()
@@ -123,7 +124,7 @@ namespace AppDevAssignment
             //display amount of milk for all cows and goats
             MessageBox.Show("Average cow/goat profit\n" + "--------------------------------\n" + avgCowGoatProfit.ToString() +
                             "\nAverage sheep profit\n" + "--------------------------------\n" + avgSheepProfit.ToString());
-        }
+        }//end of Task 6
 
         //Task 7 Display the ratio of Dogs’ cost compared to the total cost
         public static void CalculateCostDifference()
@@ -158,7 +159,7 @@ namespace AppDevAssignment
             MessageBox.Show("Other animal costs\n" + "--------------------------------\n$" + animalCosts.ToString() +
                             "\nDog costs\n" + "--------------------------------\n$" + dogCosts.ToString() +
                             "\nDog cost ratio\n" + "--------------------------------\n$" + ratio.ToString());
-        }
+        }//end of Task 7
 
         //Task 8 Generate a file that contains the ID of all animal ordered by their profitability
         //(You are not allowed to use built-in sorting algorithm – Your code must do the sorting). Dogs are excluded
@@ -179,7 +180,7 @@ namespace AppDevAssignment
                     }
                 }
             }
-        }
+        }//end of Task 8
 
         //Task 9 Display the ratio of livestock with the color red 
         public static void CalculateAllRed()
@@ -209,7 +210,7 @@ namespace AppDevAssignment
             MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxiliary.animalCount.ToString() +
                             "\nNumber of red animals\n" + "-----------------------------\n" + amountOfRed.ToString() +
                             "\nRed animal ratio\n" + "-----------------------------\n" + "%" + ratio.ToString() + " of animals are red");
-        }
+        }//end of Task 9
 
         //Task 10 Display the total tax paid for Jersey Cows
         public static void jerseyCowTax()
@@ -222,7 +223,7 @@ namespace AppDevAssignment
             }
 
             MessageBox.Show(jerseyCowTax.ToString());
-        }
+        }//end of Task 10
 
         //Task 11 The user enter a threshold (number of years), and the program displays the ratio of 
         //the number of animal farm where the age is above this threshold.
@@ -247,7 +248,7 @@ namespace AppDevAssignment
 
             MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxiliary.animalCount.ToString() +
                             "\nNumber of animals above the age of: " + num.ToString() + "\n" + "-----------------------------\n" + aboveAge.ToString());
-        }
+        }//end of Task 11
 
         //Task 12 Display the total profitability of all Jersey Cows.
         public static void JerseyCowProfit()
@@ -259,7 +260,7 @@ namespace AppDevAssignment
             }
 
             MessageBox.Show("Total jersey cow profit\n" + "---------------------\n$" + jerseyCowProfit.ToString());
-        }
+        }//end of Task 12
 
 
     }

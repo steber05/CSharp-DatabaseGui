@@ -12,7 +12,6 @@ namespace AppDevAssignment
 {
     public partial class IndividualReports : Form
     {
-        
         public IndividualReports()
         {
             InitializeComponent();
@@ -28,7 +27,7 @@ namespace AppDevAssignment
             }
             catch (Exception)
             {
-                if(Database.allAnimals.Count > 0)
+                if (Database.allAnimals.Count > 0)
                 {
                     MessageBox.Show("Invalid ID!");
                     idTextBox.Text = "";
@@ -38,9 +37,9 @@ namespace AppDevAssignment
                     MessageBox.Show("Please choose a database first\n\t Press F4");
                     idTextBox.Text = "";
                 }
-                
+
             }
-            
+
         }
 
         private void IdTextBox_KeyPress(object sender, KeyPressEventArgs e)
