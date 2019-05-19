@@ -30,8 +30,7 @@ namespace AppDevAssignment
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("\tError!\n" + ex.Message);
-                    InitializeFile();
+                    MessageBox.Show("Error initializing database please try again\n" + ex.Message);
                 }
                 Database.databasePassed = true;
             }
@@ -40,7 +39,16 @@ namespace AppDevAssignment
         private void ConnectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            InitializeFile();
+            try
+            {
+                InitializeFile();
+                connectToolStripMenuItem.IsDisabled;
+                AppForms.mainMenu.connectToolStripMenuItem.Enabled = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error initializing database");
+            }
             this.Cursor = Cursors.Default;
         }
 
@@ -56,7 +64,7 @@ namespace AppDevAssignment
             Application.Exit();
         }
 
-        private void IndividualReportsForm_Click(object sender, EventArgs e)
+        private void IndividualReportForm_Click(object sender, EventArgs e)
         {
             if (Database.databasePassed)
             {
@@ -74,7 +82,35 @@ namespace AppDevAssignment
         {
             if (Database.databasePassed)
             {
-                AppForms.miscellaneous.Show();
+                AppForms.miscellaneousReport.Show();
+                this.Hide();
+                AppForms.mainMenuVisible = false;
+            }
+            else
+            {
+                MessageBox.Show("Please connect to database first\n\t  Press F4");
+            }
+        }
+
+        private void PartialReportForm_Click(object sender, EventArgs e)
+        {
+            if (Database.databasePassed)
+            {
+                AppForms.partialReport.Show();
+                this.Hide();
+                AppForms.mainMenuVisible = false;
+            }
+            else
+            {
+                MessageBox.Show("Please connect to database first\n\t  Press F4");
+            }
+        }
+
+        private void TotalReportForm_Click(object sender, EventArgs e)
+        {
+            if (Database.databasePassed)
+            {
+                AppForms.totalReport.Show();
                 this.Hide();
                 AppForms.mainMenuVisible = false;
             }

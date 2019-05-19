@@ -1,6 +1,6 @@
 ﻿namespace AppDevAssignment
 {
-    partial class Miscellaneous
+    partial class TotalReports
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Miscellaneous));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TotalReports));
+            this.backButton = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cowGoatMilkButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // backButton
+            // 
+            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
+            this.backButton.Location = new System.Drawing.Point(761, 0);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(39, 36);
+            this.backButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backButton.TabIndex = 6;
+            this.backButton.TabStop = false;
+            this.backButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // menuStrip1
             // 
@@ -46,7 +56,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
@@ -70,44 +80,21 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
-            // cowGoatMilkButton
-            // 
-            this.cowGoatMilkButton.Location = new System.Drawing.Point(78, 57);
-            this.cowGoatMilkButton.Name = "cowGoatMilkButton";
-            this.cowGoatMilkButton.Size = new System.Drawing.Size(75, 23);
-            this.cowGoatMilkButton.TabIndex = 1;
-            this.cowGoatMilkButton.Text = "Click here";
-            this.cowGoatMilkButton.UseVisualStyleBackColor = true;
-            this.cowGoatMilkButton.Click += new System.EventHandler(this.CowGoatMilkButton_Click);
-            // 
-            // backButton
-            // 
-            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
-            this.backButton.Location = new System.Drawing.Point(761, 0);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(39, 36);
-            this.backButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backButton.TabIndex = 6;
-            this.backButton.TabStop = false;
-            this.backButton.Click += new System.EventHandler(this.BackButton_Click);
-            // 
-            // Miscellaneous
+            // TotalReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.cowGoatMilkButton);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Miscellaneous";
+            this.Name = "TotalReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Miscellaneous";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Miscellaneous_FormClosed);
+            this.Text = "Total reports";
+            ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,11 +102,10 @@
 
         #endregion
 
+        private System.Windows.Forms.PictureBox backButton;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mainMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Button cowGoatMilkButton;
-        private System.Windows.Forms.PictureBox backButton;
     }
 }

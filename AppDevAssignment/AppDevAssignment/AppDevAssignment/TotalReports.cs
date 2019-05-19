@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AppDevAssignment
 {
-    public partial class Miscellaneous : Form
+    public partial class TotalReports : Form
     {
-        public Miscellaneous()
+        public TotalReports()
         {
             InitializeComponent();
-        }
-
-        private void CowGoatMilkButton_Click(object sender, EventArgs e)
-        {
-            TaskCode.PrintIDToFile();
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -27,11 +22,6 @@ namespace AppDevAssignment
             AppForms.mainMenu.Show();
             this.Hide();
             AppForms.mainMenuVisible = true;
-        }
-
-        private void Miscellaneous_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

@@ -35,14 +35,14 @@
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miscellaneousForm = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.individualReportsForm = new System.Windows.Forms.PictureBox();
+            this.totalReportForm = new System.Windows.Forms.PictureBox();
+            this.partialReportForm = new System.Windows.Forms.PictureBox();
+            this.individualReportForm = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miscellaneousForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.individualReportsForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalReportForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partialReportForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.individualReportForm)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -100,45 +100,47 @@
             this.miscellaneousForm.TabStop = false;
             this.miscellaneousForm.Click += new System.EventHandler(this.MiscellaneousForm_Click);
             // 
-            // pictureBox2
+            // totalReportForm
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 241);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(232, 173);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.totalReportForm.Image = ((System.Drawing.Image)(resources.GetObject("totalReportForm.Image")));
+            this.totalReportForm.Location = new System.Drawing.Point(312, 40);
+            this.totalReportForm.Name = "totalReportForm";
+            this.totalReportForm.Size = new System.Drawing.Size(232, 173);
+            this.totalReportForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.totalReportForm.TabIndex = 2;
+            this.totalReportForm.TabStop = false;
+            this.totalReportForm.Click += new System.EventHandler(this.TotalReportForm_Click);
             // 
-            // pictureBox3
+            // partialReportForm
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(312, 40);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(232, 173);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.partialReportForm.Image = ((System.Drawing.Image)(resources.GetObject("partialReportForm.Image")));
+            this.partialReportForm.Location = new System.Drawing.Point(12, 40);
+            this.partialReportForm.Name = "partialReportForm";
+            this.partialReportForm.Size = new System.Drawing.Size(232, 173);
+            this.partialReportForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.partialReportForm.TabIndex = 3;
+            this.partialReportForm.TabStop = false;
+            this.partialReportForm.Click += new System.EventHandler(this.PartialReportForm_Click);
             // 
-            // individualReportsForm
+            // individualReportForm
             // 
-            this.individualReportsForm.Image = ((System.Drawing.Image)(resources.GetObject("individualReportsForm.Image")));
-            this.individualReportsForm.Location = new System.Drawing.Point(12, 40);
-            this.individualReportsForm.Name = "individualReportsForm";
-            this.individualReportsForm.Size = new System.Drawing.Size(232, 173);
-            this.individualReportsForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.individualReportsForm.TabIndex = 4;
-            this.individualReportsForm.TabStop = false;
-            this.individualReportsForm.Click += new System.EventHandler(this.IndividualReportsForm_Click);
+            this.individualReportForm.Image = ((System.Drawing.Image)(resources.GetObject("individualReportForm.Image")));
+            this.individualReportForm.Location = new System.Drawing.Point(12, 241);
+            this.individualReportForm.Name = "individualReportForm";
+            this.individualReportForm.Size = new System.Drawing.Size(232, 173);
+            this.individualReportForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.individualReportForm.TabIndex = 4;
+            this.individualReportForm.TabStop = false;
+            this.individualReportForm.Click += new System.EventHandler(this.IndividualReportForm_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 450);
-            this.Controls.Add(this.individualReportsForm);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.individualReportForm);
+            this.Controls.Add(this.partialReportForm);
+            this.Controls.Add(this.totalReportForm);
             this.Controls.Add(this.miscellaneousForm);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -146,14 +148,14 @@
             this.MaximizeBox = false;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainMenu";
+            this.Text = "Main menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miscellaneousForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.individualReportsForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalReportForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partialReportForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.individualReportForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,8 +169,8 @@
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
         private System.Windows.Forms.PictureBox miscellaneousForm;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox individualReportsForm;
+        private System.Windows.Forms.PictureBox totalReportForm;
+        private System.Windows.Forms.PictureBox partialReportForm;
+        private System.Windows.Forms.PictureBox individualReportForm;
     }
 }

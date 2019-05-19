@@ -39,9 +39,9 @@
             this.queryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.backButtonIR = new System.Windows.Forms.PictureBox();
+            this.backButton = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.backButtonIR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             this.SuspendLayout();
             // 
             // queryButton
@@ -120,16 +120,16 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // backButtonIR
+            // backButton
             // 
-            this.backButtonIR.Image = ((System.Drawing.Image)(resources.GetObject("backButtonIR.Image")));
-            this.backButtonIR.Location = new System.Drawing.Point(242, 0);
-            this.backButtonIR.Name = "backButtonIR";
-            this.backButtonIR.Size = new System.Drawing.Size(39, 36);
-            this.backButtonIR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backButtonIR.TabIndex = 5;
-            this.backButtonIR.TabStop = false;
-            this.backButtonIR.Click += new System.EventHandler(this.BackButtonIR_Click);
+            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
+            this.backButton.Location = new System.Drawing.Point(242, 0);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(39, 36);
+            this.backButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backButton.TabIndex = 5;
+            this.backButton.TabStop = false;
+            this.backButton.Click += new System.EventHandler(this.BackButtonIR_Click);
             // 
             // IndividualReports
             // 
@@ -137,7 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 99);
-            this.Controls.Add(this.backButtonIR);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(this.queryButton);
@@ -151,7 +151,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.IndividualReports_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.backButtonIR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,7 +168,7 @@
         private System.Windows.Forms.ToolStripMenuItem queryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem queryIDToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.PictureBox backButtonIR;
+        private System.Windows.Forms.PictureBox backButton;
     }
 }
 

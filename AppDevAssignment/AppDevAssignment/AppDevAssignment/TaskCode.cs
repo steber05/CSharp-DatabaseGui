@@ -213,7 +213,7 @@ namespace AppDevAssignment
         }//end of Task 9
 
         //Task 10 Display the total tax paid for Jersey Cows
-        public static void jerseyCowTax()
+        public static void JerseyCowTax()
         {
             double jerseyCowTax = 0;
 
@@ -261,7 +261,5 @@ namespace AppDevAssignment
 
             MessageBox.Show("Total jersey cow profit\n" + "---------------------\n$" + jerseyCowProfit.ToString());
         }//end of Task 12
-
-
     }
 }
