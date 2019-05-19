@@ -21,6 +21,7 @@ namespace AppDevAssignment
         public static LiveStock[] dogs;
         public static LiveStock[] goats;
         public static LiveStock[] sheep;
-        public static LiveStock[] allStock;
+        public static LiveStock[] allStock;//all animals except dogs
+        public static double[] commodities;
     }
 }

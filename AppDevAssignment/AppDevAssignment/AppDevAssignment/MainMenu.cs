@@ -42,8 +42,6 @@ namespace AppDevAssignment
             try
             {
                 InitializeFile();
-                connectToolStripMenuItem.IsDisabled;
-                AppForms.mainMenu.connectToolStripMenuItem.Enabled = false;
             }
             catch (Exception)
             {
@@ -64,11 +62,11 @@ namespace AppDevAssignment
             Application.Exit();
         }
 
-        private void IndividualReportForm_Click(object sender, EventArgs e)
+        private void TotalReportForm_Click(object sender, EventArgs e)
         {
             if (Database.databasePassed)
             {
-                AppForms.individualReport.Show();
+                AppForms.profitReport.Show();
                 this.Hide();
                 AppForms.mainMenuVisible = false;
             }
@@ -92,11 +90,11 @@ namespace AppDevAssignment
             }
         }
 
-        private void PartialReportForm_Click(object sender, EventArgs e)
+        private void IndividualReportForm_Click(object sender, EventArgs e)
         {
             if (Database.databasePassed)
             {
-                AppForms.partialReport.Show();
+                AppForms.individualReport.Show();
                 this.Hide();
                 AppForms.mainMenuVisible = false;
             }
@@ -106,11 +104,11 @@ namespace AppDevAssignment
             }
         }
 
-        private void TotalReportForm_Click(object sender, EventArgs e)
+        private void TaxReportForm_Click(object sender, EventArgs e)
         {
             if (Database.databasePassed)
             {
-                AppForms.totalReport.Show();
+                AppForms.taxReport.Show();
                 this.Hide();
                 AppForms.mainMenuVisible = false;
             }

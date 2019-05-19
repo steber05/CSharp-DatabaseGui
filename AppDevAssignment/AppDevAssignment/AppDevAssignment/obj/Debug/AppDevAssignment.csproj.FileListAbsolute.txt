@@ -33,5 +33,5 @@ D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevA
 D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.pdb
 D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.Miscellaneous.resources
 D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.csprojAssemblyReference.cache
-D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.PartialReports.resources
-D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.TotalReports.resources
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.TaxReports.resources
+D:\code\github\cSharp-AppDevAssignment\AppDevAssignment\AppDevAssignment\AppDevAssignment\obj\Debug\AppDevAssignment.ProfitReports.resources

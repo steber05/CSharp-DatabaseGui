@@ -50,14 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TotalReports.cs">
+    <Compile Include="ProfitReports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TotalReports.Designer.cs">
-      <DependentUpon>TotalReports.cs</DependentUpon>
+    <Compile Include="ProfitReports.Designer.cs">
+      <DependentUpon>ProfitReports.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms.cs" />
-    <Compile Include="Auxilary.cs" />
+    <Compile Include="Auxiliary.cs" />
     <Compile Include="Cow.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Dog.cs" />
@@ -83,11 +83,11 @@
       <DependentUpon>Miscellaneous.cs</DependentUpon>
     </Compile>
     <Compile Include="Pricing.cs" />
-    <Compile Include="PartialReports.cs">
+    <Compile Include="TaxReports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PartialReports.Designer.cs">
-      <DependentUpon>PartialReports.cs</DependentUpon>
+    <Compile Include="TaxReports.Designer.cs">
+      <DependentUpon>TaxReports.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,16 +107,16 @@
     <EmbeddedResource Include="Miscellaneous.resx">
       <DependentUpon>Miscellaneous.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PartialReports.resx">
-      <DependentUpon>PartialReports.cs</DependentUpon>
+    <EmbeddedResource Include="TaxReports.resx">
+      <DependentUpon>TaxReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TotalReports.resx">
-      <DependentUpon>TotalReports.cs</DependentUpon>
+    <EmbeddedResource Include="ProfitReports.resx">
+      <DependentUpon>ProfitReports.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

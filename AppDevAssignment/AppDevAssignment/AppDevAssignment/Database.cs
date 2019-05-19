@@ -12,17 +12,37 @@ namespace AppDevAssignment
         public static bool databasePassed = false;
 
         public static Dictionary<int, LiveStock> allAnimals;
+
+        public static void ResetDataStructures()
+        {
+            //used after error checking to stop duplicate entry attempts. Also should be picked up by garbage collection
+            allAnimals = null;
+            Auxiliary.cows = null;
+            Auxiliary.cowCount = 0;
+            Auxiliary.dogs = null;
+            Auxiliary.dogCount = 0;
+            Auxiliary.goats = null;
+            Auxiliary.goatCount = 0;
+            Auxiliary.jerseyCows = null;
+            Auxiliary.jerseyCowCount = 0;
+            Auxiliary.sheep = null;
+            Auxiliary.sheepCount = 0;
+            Auxiliary.animalCount = 0;
+            Auxiliary.commodities = null;
+            Auxiliary.allStock = null;
+        }
         public static void InitializeDatabase(string file)
         {
             //reinitialize for error checking purposes
-            allAnimals = null;//used after error checking to stop duplicate entry attempts. Also should be picked up by garbage collection
+            ResetDataStructures();
             allAnimals = new Dictionary<int, LiveStock>();//re initialize hash table
 
             //variable database elements
-            string[] tableNames = new string[] { "cows", "dogs", "goats", "sheep", "[Commodity Prices]" };//array used to loop through each table
+            string[] tableNames = tableNames = new string[] { "cows", "dogs", "goats", "sheep", "[Commodity Prices]" };//array used to loop through each table
+
             String tableName;//allows for a loop through the whole database
             string query;//changes based on which table we are on
-            double[] commodities = new double[6];//hardcoded because this table is not usually added to or removed from
+            Auxiliary.commodities = new double[6];//hardcoded because this table is not usually added to or removed from
             int commodityTracker = 0;
 
             //database structure
@@ -107,7 +127,7 @@ namespace AppDevAssignment
                     }//end of sheep
                     else if (i == 4)//commodities
                     {
-                        commodities[commodityTracker] = Convert.ToDouble(reader["Price"]);
+                        Auxiliary.commodities[commodityTracker] = Convert.ToDouble(reader["Price"]);
                         commodityTracker++;//increment counter for seperate arrays
                     }//end of commodities
                 }//end of reader loop
@@ -117,12 +137,12 @@ namespace AppDevAssignment
             connection.Close();
 
             //update commodities
-            Pricing.goatMilkPrice = commodities[0];
-            Pricing.sheepWoolPrice = commodities[1];
-            Pricing.waterPrice = commodities[2];
-            Pricing.generalTax = commodities[3];
-            Pricing.jerseyCowTax = commodities[4];
-            Pricing.cowMilkPrice = commodities[5];
+            Pricing.goatMilkPrice = Auxiliary.commodities[0];
+            Pricing.sheepWoolPrice = Auxiliary.commodities[1];
+            Pricing.waterPrice = Auxiliary.commodities[2];
+            Pricing.generalTax = Auxiliary.commodities[3];
+            Pricing.jerseyCowTax = Auxiliary.commodities[4];
+            Pricing.cowMilkPrice = Auxiliary.commodities[5];
 
             //initialize auxilary arrays
             Auxiliary.jerseyCows = new LiveStock[Auxiliary.jerseyCowCount];

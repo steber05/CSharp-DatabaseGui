@@ -21,7 +21,7 @@ namespace AppDevAssignment
                 totalProfit += Auxiliary.allStock[i].CalculateProfit() / 365;
             }
 
-            MessageBox.Show("Total daily profit/loss\n" + "---------------------\n" + totalProfit.ToString());
+            MessageBox.Show("Total daily profit/loss\n" + "---------------------\n$" + Math.Round(totalProfit, 2).ToString());
         }//end of Task 2
 
         //Task 3 Display the total tax paid to the government per month 
@@ -34,7 +34,7 @@ namespace AppDevAssignment
                 tax += Auxiliary.allStock[i].CalculateTax() / 12;
             }
 
-            MessageBox.Show("Tax per month\n" + "---------------------\n$" + tax.ToString());
+            MessageBox.Show("Tax per month\n" + "---------------------\n$" + Math.Round(tax, 2).ToString());
         }//end of Task 3
 
         //Task 4 Display the total amount of milk per day for goats and cows
@@ -57,7 +57,7 @@ namespace AppDevAssignment
             }
 
             //display amount of milk for all cows and goats
-            MessageBox.Show("Cow and goat milk\n" + "---------------------\n" + goatCowMilk.ToString());
+            MessageBox.Show("Cow and goat milk\n" + "---------------------\n" + Math.Round(goatCowMilk, 2).ToString() + "Kg's");
         }//end of Task 4
 
         //task 5 Display the average age of all animal farms(dog excluded)
@@ -122,8 +122,8 @@ namespace AppDevAssignment
             avgSheepProfit = sheepProfit / Auxiliary.sheepCount;
 
             //display amount of milk for all cows and goats
-            MessageBox.Show("Average cow/goat profit\n" + "--------------------------------\n" + avgCowGoatProfit.ToString() +
-                            "\nAverage sheep profit\n" + "--------------------------------\n" + avgSheepProfit.ToString());
+            MessageBox.Show("Average cow/goat profit\n" + "--------------------------------\n$" + Math.Round(avgCowGoatProfit, 2).ToString() +
+                            "\nAverage sheep profit\n" + "--------------------------------\n$" + Math.Round(avgSheepProfit, 2).ToString());
         }//end of Task 6
 
         //Task 7 Display the ratio of Dogs’ cost compared to the total cost
@@ -156,9 +156,9 @@ namespace AppDevAssignment
 
             ratio = animalCosts / dogCosts;
 
-            MessageBox.Show("Other animal costs\n" + "--------------------------------\n$" + animalCosts.ToString() +
-                            "\nDog costs\n" + "--------------------------------\n$" + dogCosts.ToString() +
-                            "\nDog cost ratio\n" + "--------------------------------\n$" + ratio.ToString());
+            MessageBox.Show("Other animal costs\n" + "--------------------------------\n$" + Math.Round(animalCosts, 2).ToString() +
+                            "\nDog costs\n" + "--------------------------------\n$" + Math.Round(dogCosts, 2).ToString() +
+                            "\nDog cost ratio\n" + "--------------------------------\n$" + Math.Round(ratio, 2).ToString());
         }//end of Task 7
 
         //Task 8 Generate a file that contains the ID of all animal ordered by their profitability
@@ -219,10 +219,10 @@ namespace AppDevAssignment
 
             for (int i = 0; i < Auxiliary.jerseyCows.Length; i++)
             {
-                jerseyCowTax += Pricing.jerseyCowTax * Auxiliary.jerseyCowCount;
+                jerseyCowTax += Auxiliary.jerseyCows[i].CalculateTax();
             }
 
-            MessageBox.Show(jerseyCowTax.ToString());
+            MessageBox.Show("Total jersey cow tax\n--------------------------\n$" + Math.Round(jerseyCowTax, 2).ToString());
         }//end of Task 10
 
         //Task 11 The user enter a threshold (number of years), and the program displays the ratio of 
@@ -259,7 +259,7 @@ namespace AppDevAssignment
                 jerseyCowProfit += Auxiliary.jerseyCows[i].CalculateProfit();
             }
 
-            MessageBox.Show("Total jersey cow profit\n" + "---------------------\n$" + jerseyCowProfit.ToString());
+            MessageBox.Show("Total jersey cow profit\n" + "---------------------\n$" + Math.Round(jerseyCowProfit, 2).ToString());
         }//end of Task 12
     }
 }

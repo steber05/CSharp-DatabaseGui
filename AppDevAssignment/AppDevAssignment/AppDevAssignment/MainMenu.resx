@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="miscellaneousForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="individualReportForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IwAALiMBeKU/dgAAAAd0SU1FB+MFBAQnIhMqgPYAACrpSURBVHhe7d0JrJV1esdxh8RMIm2ToaajjaRx
@@ -604,7 +604,7 @@
         aQof+MD/B4DXYIpPSg1oAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="partialReportForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="taxReportForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IwAALiMBeKU/dgAAAAd0SU1FB+MFBAUqJ9csYAMAAC6NSURBVHhe7d0L7JX1fcdxu8Q0sWNJO2PjwrLE
@@ -809,7 +809,7 @@
         AAAAAEjESSf9P7A6eUgsj15gAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="individualReportForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="miscellaneousForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IwAALiMBeKU/dgAAAAd0SU1FB+MFBAUmL3VCpz0AAEkhSURBVHhe7Z0HtFbFub9z/yu5omByRTCi2IJc
