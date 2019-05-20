@@ -185,8 +185,8 @@ namespace AppDevAssignment
         //Task 9 Display the ratio of livestock with the color red 
         public static void CalculateAllRed()
         {
-            int amountOfRed = 0;
-            int ratio = 0;
+            double amountOfRed = 0;
+            double redRatio = 0;
 
             //loop through and find all red animals
             for (int i = 0; i < Auxiliary.allStock.Length; i++)
@@ -205,11 +205,12 @@ namespace AppDevAssignment
             }
 
             //calculate ratio
-            ratio = Auxiliary.animalCount / amountOfRed;
+            redRatio = (amountOfRed / Auxiliary.animalCount);
+            redRatio *= 100;
 
             MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxiliary.animalCount.ToString() +
                             "\nNumber of red animals\n" + "-----------------------------\n" + amountOfRed.ToString() +
-                            "\nRed animal ratio\n" + "-----------------------------\n" + "%" + ratio.ToString() + " of animals are red");
+                            "\nRed animal ratio\n" + "-----------------------------\n" + "%" + redRatio.ToString() + " of animals are red");
         }//end of Task 9
 
         //Task 10 Display the total tax paid for Jersey Cows
@@ -229,25 +230,30 @@ namespace AppDevAssignment
         //the number of animal farm where the age is above this threshold.
         public static void DisplayAgesAbove(int num)
         {
-            int aboveAge = 0;
+            double aboveAge = 0;
+            double ratio = 0;
 
             for (int i = 0; i < Auxiliary.allStock.Length; i++)
             {
-                if (Auxiliary.allStock[i].age >= num)
+                if (Auxiliary.allStock[i].age > num)
                 {
                     aboveAge++;
                 }
             }
             for (int j = 0; j < Auxiliary.dogs.Length; j++)
             {
-                if (Auxiliary.dogs[j].age >= num)
+                if (Auxiliary.dogs[j].age > num)
                 {
                     aboveAge++;
                 }
             }
 
+            ratio = aboveAge / Auxiliary.animalCount;
+            ratio *= 100;
+
             MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxiliary.animalCount.ToString() +
-                            "\nNumber of animals above the age of: " + num.ToString() + "\n" + "-----------------------------\n" + aboveAge.ToString());
+                            "\nNumber of animals above the age of: " + num.ToString() + "\n" + "-----------------------------\n" + aboveAge.ToString() +
+                            "\nRatio\n-----------\n%" + ratio.ToString());
         }//end of Task 11
 
         //Task 12 Display the total profitability of all Jersey Cows.

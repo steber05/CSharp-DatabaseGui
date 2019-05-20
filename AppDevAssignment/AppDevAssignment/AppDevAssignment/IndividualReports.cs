@@ -37,9 +37,7 @@ namespace AppDevAssignment
                     MessageBox.Show("Please choose a database first\n\t Press F4");
                     idTextBox.Text = "";
                 }
-
             }
-
         }
 
         private void IdTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -54,10 +52,6 @@ namespace AppDevAssignment
         {
             queryButton.PerformClick();
         }
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void BackButtonIR_Click(object sender, EventArgs e)
         {
@@ -66,10 +60,21 @@ namespace AppDevAssignment
             AppForms.mainMenuVisible = true;
         }
 
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void IndividualReports_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AppForms.mainMenu.Show();
             this.Hide();
+            AppForms.mainMenuVisible = true;
         }
     }
 }

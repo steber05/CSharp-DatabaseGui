@@ -14,7 +14,7 @@ namespace AppDevAssignment
         public static int dogCount = 0;
         public static int goatCount = 0;
         public static int sheepCount = 0;
-        public static int animalCount = 0;
+        public static int animalCount = 0;//All animals
         //seperate animals based on type
         public static LiveStock[] jerseyCows;
         public static LiveStock[] cows;

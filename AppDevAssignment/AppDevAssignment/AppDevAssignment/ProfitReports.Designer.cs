@@ -83,6 +83,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
@@ -160,7 +161,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ProfitReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Total reports";
+            this.Text = "Profit reports";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProfitReports_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
             this.menuStrip1.ResumeLayout(false);

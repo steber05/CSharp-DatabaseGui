@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IndividualReports));
-            this.queryButton = new System.Windows.Forms.Button();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.idLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -40,23 +39,15 @@
             this.queryIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.backButton = new System.Windows.Forms.PictureBox();
+            this.queryButton = new System.Windows.Forms.Button();
+            this.mainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             this.SuspendLayout();
             // 
-            // queryButton
-            // 
-            this.queryButton.Location = new System.Drawing.Point(102, 69);
-            this.queryButton.Name = "queryButton";
-            this.queryButton.Size = new System.Drawing.Size(75, 23);
-            this.queryButton.TabIndex = 0;
-            this.queryButton.Text = "Query";
-            this.queryButton.UseVisualStyleBackColor = true;
-            this.queryButton.Click += new System.EventHandler(this.QueryButton_Click);
-            // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(90, 43);
+            this.idTextBox.Location = new System.Drawing.Point(76, 49);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 1;
@@ -65,9 +56,10 @@
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(110, 27);
+            this.idLabel.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idLabel.Location = new System.Drawing.Point(12, 46);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(58, 13);
+            this.idLabel.Size = new System.Drawing.Size(56, 23);
             this.idLabel.TabIndex = 3;
             this.idLabel.Text = "Enter a ID:";
             // 
@@ -79,13 +71,14 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(281, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(188, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainMenuToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -123,7 +116,7 @@
             // backButton
             // 
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
-            this.backButton.Location = new System.Drawing.Point(242, 0);
+            this.backButton.Location = new System.Drawing.Point(149, 0);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(39, 36);
             this.backButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -131,16 +124,34 @@
             this.backButton.TabStop = false;
             this.backButton.Click += new System.EventHandler(this.BackButtonIR_Click);
             // 
+            // queryButton
+            // 
+            this.queryButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.queryButton.Location = new System.Drawing.Point(12, 86);
+            this.queryButton.Name = "queryButton";
+            this.queryButton.Size = new System.Drawing.Size(164, 36);
+            this.queryButton.TabIndex = 8;
+            this.queryButton.Text = "Query";
+            this.queryButton.UseVisualStyleBackColor = true;
+            this.queryButton.Click += new System.EventHandler(this.QueryButton_Click);
+            // 
+            // mainMenuToolStripMenuItem
+            // 
+            this.mainMenuToolStripMenuItem.Name = "mainMenuToolStripMenuItem";
+            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mainMenuToolStripMenuItem.Text = "Main menu";
+            this.mainMenuToolStripMenuItem.Click += new System.EventHandler(this.MainMenuToolStripMenuItem_Click);
+            // 
             // IndividualReports
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 99);
+            this.ClientSize = new System.Drawing.Size(188, 134);
+            this.Controls.Add(this.queryButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.queryButton);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MainMenuStrip = this.menuStrip1;
@@ -158,8 +169,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button queryButton;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -169,6 +178,8 @@
         private System.Windows.Forms.ToolStripMenuItem queryIDToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.PictureBox backButton;
+        private System.Windows.Forms.Button queryButton;
+        private System.Windows.Forms.ToolStripMenuItem mainMenuToolStripMenuItem;
     }
 }
 

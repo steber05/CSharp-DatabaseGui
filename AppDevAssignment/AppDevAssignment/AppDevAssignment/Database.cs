@@ -15,7 +15,7 @@ namespace AppDevAssignment
 
         public static void ResetDataStructures()
         {
-            //used after error checking to stop duplicate entry attempts. Also should be picked up by garbage collection
+            //used after error checking to stop duplicate entry attempts.
             allAnimals = null;
             Auxiliary.cows = null;
             Auxiliary.cowCount = 0;
