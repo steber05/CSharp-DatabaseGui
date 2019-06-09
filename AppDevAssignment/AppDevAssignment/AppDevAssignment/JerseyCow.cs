@@ -46,7 +46,7 @@ namespace AppDevAssignment
         public override double CalculateTax()
         {
             double tax = 0;
-            tax += Pricing.generalTax * weight;
+            tax += (Pricing.generalTax * weight) * 365;
             tax += Pricing.jerseyCowTax;
             return tax;
         }//end of overriden calculateTax
