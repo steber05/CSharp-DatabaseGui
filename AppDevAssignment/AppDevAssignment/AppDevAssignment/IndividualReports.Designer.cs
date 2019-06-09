@@ -34,13 +34,13 @@
             this.idLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.backButton = new System.Windows.Forms.PictureBox();
             this.queryButton = new System.Windows.Forms.Button();
-            this.mainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             this.SuspendLayout();
@@ -56,10 +56,10 @@
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.Location = new System.Drawing.Point(12, 46);
+            this.idLabel.Font = new System.Drawing.Font("Microsoft Himalaya", 13F);
+            this.idLabel.Location = new System.Drawing.Point(12, 53);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(56, 23);
+            this.idLabel.Size = new System.Drawing.Size(60, 18);
             this.idLabel.TabIndex = 3;
             this.idLabel.Text = "Enter a ID:";
             // 
@@ -84,11 +84,18 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // mainMenuToolStripMenuItem
+            // 
+            this.mainMenuToolStripMenuItem.Name = "mainMenuToolStripMenuItem";
+            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.mainMenuToolStripMenuItem.Text = "Main menu";
+            this.mainMenuToolStripMenuItem.Click += new System.EventHandler(this.MainMenuToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -126,7 +133,7 @@
             // 
             // queryButton
             // 
-            this.queryButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.queryButton.Font = new System.Drawing.Font("Microsoft Himalaya", 22F);
             this.queryButton.Location = new System.Drawing.Point(12, 86);
             this.queryButton.Name = "queryButton";
             this.queryButton.Size = new System.Drawing.Size(164, 36);
@@ -134,13 +141,6 @@
             this.queryButton.Text = "Query";
             this.queryButton.UseVisualStyleBackColor = true;
             this.queryButton.Click += new System.EventHandler(this.QueryButton_Click);
-            // 
-            // mainMenuToolStripMenuItem
-            // 
-            this.mainMenuToolStripMenuItem.Name = "mainMenuToolStripMenuItem";
-            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mainMenuToolStripMenuItem.Text = "Main menu";
-            this.mainMenuToolStripMenuItem.Click += new System.EventHandler(this.MainMenuToolStripMenuItem_Click);
             // 
             // IndividualReports
             // 

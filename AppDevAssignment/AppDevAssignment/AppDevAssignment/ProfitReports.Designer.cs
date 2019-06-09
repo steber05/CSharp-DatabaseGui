@@ -90,7 +90,7 @@
             // 
             // jerseyCowProfitButton
             // 
-            this.jerseyCowProfitButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jerseyCowProfitButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.jerseyCowProfitButton.Location = new System.Drawing.Point(12, 84);
             this.jerseyCowProfitButton.Name = "jerseyCowProfitButton";
             this.jerseyCowProfitButton.Size = new System.Drawing.Size(178, 36);
@@ -101,7 +101,7 @@
             // 
             // profitDifferenceButton
             // 
-            this.profitDifferenceButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profitDifferenceButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.profitDifferenceButton.Location = new System.Drawing.Point(12, 126);
             this.profitDifferenceButton.Name = "profitDifferenceButton";
             this.profitDifferenceButton.Size = new System.Drawing.Size(178, 36);
@@ -113,7 +113,7 @@
             // printToFileButton
             // 
             this.printToFileButton.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.printToFileButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printToFileButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.printToFileButton.ForeColor = System.Drawing.SystemColors.Control;
             this.printToFileButton.Location = new System.Drawing.Point(12, 210);
             this.printToFileButton.Name = "printToFileButton";
@@ -125,7 +125,7 @@
             // 
             // totalProfitLossButton
             // 
-            this.totalProfitLossButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalProfitLossButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.totalProfitLossButton.Location = new System.Drawing.Point(12, 168);
             this.totalProfitLossButton.Name = "totalProfitLossButton";
             this.totalProfitLossButton.Size = new System.Drawing.Size(178, 36);
@@ -136,7 +136,7 @@
             // 
             // amountOfMilkButton
             // 
-            this.amountOfMilkButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amountOfMilkButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.amountOfMilkButton.Location = new System.Drawing.Point(12, 42);
             this.amountOfMilkButton.Name = "amountOfMilkButton";
             this.amountOfMilkButton.Size = new System.Drawing.Size(178, 36);

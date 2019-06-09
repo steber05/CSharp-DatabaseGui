@@ -66,7 +66,7 @@
             // mainMenuToolStripMenuItem
             // 
             this.mainMenuToolStripMenuItem.Name = "mainMenuToolStripMenuItem";
-            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.mainMenuToolStripMenuItem.Text = "Main menu";
             this.mainMenuToolStripMenuItem.Click += new System.EventHandler(this.MainMenuToolStripMenuItem_Click);
             // 
@@ -74,7 +74,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -91,7 +91,7 @@
             // 
             // averageAgeButton
             // 
-            this.averageAgeButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.averageAgeButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.averageAgeButton.Location = new System.Drawing.Point(12, 112);
             this.averageAgeButton.Name = "averageAgeButton";
             this.averageAgeButton.Size = new System.Drawing.Size(178, 36);
@@ -102,7 +102,7 @@
             // 
             // ageThresholdButton
             // 
-            this.ageThresholdButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageThresholdButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.ageThresholdButton.Location = new System.Drawing.Point(12, 70);
             this.ageThresholdButton.Name = "ageThresholdButton";
             this.ageThresholdButton.Size = new System.Drawing.Size(178, 36);
@@ -121,16 +121,16 @@
             // ageLabel
             // 
             this.ageLabel.AutoSize = true;
-            this.ageLabel.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageLabel.Location = new System.Drawing.Point(12, 41);
+            this.ageLabel.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
+            this.ageLabel.Location = new System.Drawing.Point(8, 44);
             this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(29, 23);
+            this.ageLabel.Size = new System.Drawing.Size(36, 20);
             this.ageLabel.TabIndex = 10;
             this.ageLabel.Text = "Age:";
             // 
             // amountRedButton
             // 
-            this.amountRedButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amountRedButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.amountRedButton.Location = new System.Drawing.Point(12, 154);
             this.amountRedButton.Name = "amountRedButton";
             this.amountRedButton.Size = new System.Drawing.Size(178, 36);
@@ -141,7 +141,7 @@
             // 
             // averageCostDifferenceButton
             // 
-            this.averageCostDifferenceButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.averageCostDifferenceButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.averageCostDifferenceButton.Location = new System.Drawing.Point(12, 196);
             this.averageCostDifferenceButton.Name = "averageCostDifferenceButton";
             this.averageCostDifferenceButton.Size = new System.Drawing.Size(178, 36);

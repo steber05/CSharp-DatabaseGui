@@ -10,8 +10,21 @@ namespace AppDevAssignment
 {
     class TaskCode
     {
-
-        //Task 2 Display the total profitability/loose of the farm per day
+        //Task 1
+        /// <summary>
+        /// Display information of the animal with corresponding ID
+        /// </summary>
+        /// <param name="id"></param>
+        public static void IndividualReport(int id)
+        {
+            LiveStock animal;
+            animal = Database.allAnimals[id];
+            animal.DisplayInfo();
+        }
+        //Task 2 
+        /// <summary>
+        /// Display the total profitability/loose of the farm per day
+        /// </summary>
         public static void TotalDailyProfitLoss()
         {
             double totalProfit = 0;
@@ -24,7 +37,10 @@ namespace AppDevAssignment
             MessageBox.Show("Total daily profit/loss\n" + "---------------------\n$" + Math.Round(totalProfit, 2).ToString());
         }//end of Task 2
 
-        //Task 3 Display the total tax paid to the government per month 
+        //Task 3 
+        /// <summary>
+        /// Display the total tax paid to the government per month 
+        /// </summary>
         public static void CalculateMonthlyTax()
         {
             double tax = 0;
@@ -37,7 +53,10 @@ namespace AppDevAssignment
             MessageBox.Show("Tax per month\n" + "---------------------\n$" + Math.Round(tax, 2).ToString());
         }//end of Task 3
 
-        //Task 4 Display the total amount of milk per day for goats and cows
+        //Task 4 
+        /// <summary>
+        /// Display the total amount of milk per day for goats and cows
+        /// </summary>
         public static void CalculateGoatCowMilk()
         {
             double goatCowMilk = 0;
@@ -60,7 +79,10 @@ namespace AppDevAssignment
             MessageBox.Show("Cow and goat milk\n" + "---------------------\n" + Math.Round(goatCowMilk, 2).ToString() + "Kg's");
         }//end of Task 4
 
-        //task 5 Display the average age of all animal farms(dog excluded)
+        //task 5 
+        /// <summary>
+        /// Display the average age of all animal farms(dog excluded)
+        /// </summary>
         public static void CalculateAvgAge()
         {
             int ages = 0;
@@ -90,7 +112,10 @@ namespace AppDevAssignment
             MessageBox.Show("Average age\n" + "---------------------\n" + avgAge.ToString());
         }//end of Task 5
 
-        //Task 6 Display the average profitability of “Goats and Cow” Vs. Sheep
+        //Task 6 
+        /// <summary>
+        /// Display the average profitability of “Goats and Cow” Vs. Sheep
+        /// </summary>
         public static void CalculateProfitDifference()
         {
             double jerseyCowProfit = 0;
@@ -126,7 +151,10 @@ namespace AppDevAssignment
                             "\nAverage sheep profit\n" + "--------------------------------\n$" + Math.Round(avgSheepProfit, 2).ToString());
         }//end of Task 6
 
-        //Task 7 Display the ratio of Dogs’ cost compared to the total cost
+        //Task 7 
+        /// <summary>
+        /// Display the ratio of Dogs’ cost compared to the total cost
+        /// </summary>
         public static void CalculateCostDifference()
         {
             double animalCosts = 0;//all animals except dogs
@@ -161,8 +189,10 @@ namespace AppDevAssignment
                             "\nDog cost ratio\n" + "--------------------------------\n$" + Math.Round(ratio, 2).ToString());
         }//end of Task 7
 
-        //Task 8 Generate a file that contains the ID of all animal ordered by their profitability
-        //(You are not allowed to use built-in sorting algorithm – Your code must do the sorting). Dogs are excluded
+        //Task 8 
+        /// <summary>
+        /// Generate a file that contains the ID of all animal ordered by their profitability. Dogs are excluded
+        /// </summary>
         public static void PrintIDToFile()//chose to use bubble sort and put up with the O(n^2)
         {
             SaveFileDialog file = new SaveFileDialog();
@@ -182,7 +212,10 @@ namespace AppDevAssignment
             }
         }//end of Task 8
 
-        //Task 9 Display the ratio of livestock with the color red 
+        //Task 9
+        /// <summary>
+        /// Display the ratio of livestock with the color red 
+        /// </summary>
         public static void CalculateAllRed()
         {
             double amountOfRed = 0;
@@ -213,7 +246,10 @@ namespace AppDevAssignment
                             "\nRed animal ratio\n" + "-----------------------------\n" + "%" + redRatio.ToString() + " of animals are red");
         }//end of Task 9
 
-        //Task 10 Display the total tax paid for Jersey Cows
+        //Task 10 
+        /// <summary>
+        /// Display the total tax paid for Jersey Cows
+        /// </summary>
         public static void JerseyCowTax()
         {
             double jerseyCowTax = 0;
@@ -226,8 +262,12 @@ namespace AppDevAssignment
             MessageBox.Show("Total jersey cow tax\n--------------------------\n$" + Math.Round(jerseyCowTax, 2).ToString());
         }//end of Task 10
 
-        //Task 11 The user enter a threshold (number of years), and the program displays the ratio of 
-        //the number of animal farm where the age is above this threshold.
+        //Task 11 
+        /// <summary>
+        /// The user enter a threshold (number of years), and the program displays the ratio of 
+        ///the number of animal farm where the age is above this threshold.
+        /// </summary>
+        /// <param name="num"></param>
         public static void DisplayAgesAbove(int num)
         {
             double aboveAge = 0;
@@ -256,7 +296,10 @@ namespace AppDevAssignment
                             "\nRatio\n-----------\n%" + ratio.ToString());
         }//end of Task 11
 
-        //Task 12 Display the total profitability of all Jersey Cows.
+        //Task 12 
+        /// <summary>
+        /// Display the total profitability of all Jersey Cows.
+        /// </summary>
         public static void JerseyCowProfit()
         {
             double jerseyCowProfit = 0;

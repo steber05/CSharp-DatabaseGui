@@ -87,7 +87,7 @@
             // 
             // generalTaxButton
             // 
-            this.generalTaxButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generalTaxButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.generalTaxButton.Location = new System.Drawing.Point(12, 42);
             this.generalTaxButton.Name = "generalTaxButton";
             this.generalTaxButton.Size = new System.Drawing.Size(178, 36);
@@ -98,7 +98,7 @@
             // 
             // jerseyCowTaxButton
             // 
-            this.jerseyCowTaxButton.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jerseyCowTaxButton.Font = new System.Drawing.Font("Microsoft Himalaya", 15F);
             this.jerseyCowTaxButton.Location = new System.Drawing.Point(12, 84);
             this.jerseyCowTaxButton.Name = "jerseyCowTaxButton";
             this.jerseyCowTaxButton.Size = new System.Drawing.Size(178, 36);

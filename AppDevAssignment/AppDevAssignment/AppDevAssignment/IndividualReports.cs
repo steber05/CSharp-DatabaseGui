@@ -22,21 +22,12 @@ namespace AppDevAssignment
             LiveStock animal;
             try
             {
-                animal = Database.allAnimals[Convert.ToInt32(idTextBox.Text)];
-                animal.DisplayInfo();
+                TaskCode.IndividualReport(Convert.ToInt32(idTextBox.Text));
             }
             catch (Exception)
             {
-                if (Database.allAnimals.Count > 0)
-                {
-                    MessageBox.Show("Invalid ID!");
-                    idTextBox.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("Please choose a database first\n\t Press F4");
-                    idTextBox.Text = "";
-                }
+                MessageBox.Show("Invalid ID!");
+                idTextBox.Text = "";
             }
         }
 
