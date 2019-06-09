@@ -13,6 +13,9 @@ namespace AppDevAssignment
 
         public static Dictionary<int, LiveStock> allAnimals;
 
+        /// <summary>
+        /// Reset all variables affected by initializeDatabase()
+        /// </summary>
         public static void ResetDataStructures()
         {
             //used after error checking to stop duplicate entry attempts.
@@ -31,6 +34,11 @@ namespace AppDevAssignment
             Auxiliary.commodities = null;
             Auxiliary.allStock = null;
         }
+
+        /// <summary>
+        /// Initialize all dependencies from a local access database file
+        /// </summary>
+        /// <param name="file"></param>
         public static void InitializeDatabase(string file)
         {
             //reinitialize for error checking purposes
@@ -70,9 +78,9 @@ namespace AppDevAssignment
                     if (i == 0 && Convert.ToBoolean(reader["Is Jersy"]))//jersey cows
                     {
                         //create new animal this demonstrates inheritance and polymorphsm
-                        animal = new JerseyCow(Convert.ToInt32(reader["id"]), Convert.ToDouble(reader["Amount of water"]), 
-                                               Convert.ToDouble(reader["Daily cost"]), Convert.ToDouble(reader["weight"]), 
-                                               Convert.ToInt32(reader["age"]), reader["color"].ToString(), 
+                        animal = new JerseyCow(Convert.ToInt32(reader["id"]), Convert.ToDouble(reader["Amount of water"]),
+                                               Convert.ToDouble(reader["Daily cost"]), Convert.ToDouble(reader["weight"]),
+                                               Convert.ToInt32(reader["age"]), reader["color"].ToString(),
                                                Convert.ToDouble(reader["Amount of milk"]), Convert.ToBoolean(reader["Is Jersy"]));
 
                         allAnimals.Add(Convert.ToInt32(reader["id"]), animal);////add temp animal to hash table
@@ -82,9 +90,9 @@ namespace AppDevAssignment
                     else if (i == 0)//cows
                     {
                         //create new animal this demonstrates inheritance and polymorphsm
-                        animal = new Cow(Convert.ToInt32(reader["id"]), Convert.ToDouble(reader["Amount of water"]), 
-                                         Convert.ToDouble(reader["Daily cost"]), Convert.ToDouble(reader["weight"]), 
-                                         Convert.ToInt32(reader["age"]), reader["color"].ToString(), 
+                        animal = new Cow(Convert.ToInt32(reader["id"]), Convert.ToDouble(reader["Amount of water"]),
+                                         Convert.ToDouble(reader["Daily cost"]), Convert.ToDouble(reader["weight"]),
+                                         Convert.ToInt32(reader["age"]), reader["color"].ToString(),
                                          Convert.ToDouble(reader["Amount of milk"]), Convert.ToBoolean(reader["Is Jersy"]));
 
                         allAnimals.Add(Convert.ToInt32(reader["id"]), animal);//add temp animal to hash table
@@ -120,7 +128,7 @@ namespace AppDevAssignment
                                            Convert.ToDouble(reader["Daily cost"]), Convert.ToDouble(reader["weight"]),
                                            Convert.ToInt32(reader["age"]), reader["color"].ToString(),
                                            Convert.ToDouble(reader["Amount of wool"]));
-                        
+
                         allAnimals.Add(Convert.ToInt32(reader["id"]), animal);//add temp animal to hash table
                         Auxiliary.sheepCount++;//increment counter for seperate arrays
                         Auxiliary.animalCount++;
@@ -151,86 +159,66 @@ namespace AppDevAssignment
             Auxiliary.goats = new LiveStock[Auxiliary.goatCount];
             Auxiliary.sheep = new LiveStock[Auxiliary.sheepCount];
             Auxiliary.allStock = new LiveStock[Auxiliary.animalCount - Auxiliary.dogCount];
-            int allStockCounter = 0;
-            int genericCounter = 0;
+
+            SplitToArrays();
+            SortByProfit();
+        }//end of initializeDatabase
+
+        /// <summary>
+        /// Split allAnimal dictionary into seperate arrays
+        /// </summary>
+        public static void SplitToArrays()
+        {
+            int cowCounter = 0;
             int jCowCounter = 0;
-            //update auxilary arrays based on IDs. If ID structure changes it can be reflected here
-            for (int i = 1001; i < ((1001 + Auxiliary.cowCount) + Auxiliary.jerseyCowCount) + 50; i++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
+            int dogCounter = 0;
+            int goatCounter = 0;
+            int sheepCounter = 0;
+            int allStockCounter = 0;
+
+            foreach(LiveStock animal in allAnimals.Values)
             {
-                try
+                if(animal.GetType() == typeof(Cow))
                 {
-                    animal = allAnimals[i];
-                }
-                catch (Exception)
-                {
-                    continue;
-                } 
-                //check if jersey cow or not
-                if (animal.IsJersey())
+                    Auxiliary.cows[cowCounter] = animal;
+                    Auxiliary.allStock[allStockCounter] = animal;
+                    cowCounter++;
+                    allStockCounter++;
+                }//end of cows
+                else if (animal.GetType() == typeof(JerseyCow))
                 {
                     Auxiliary.jerseyCows[jCowCounter] = animal;
                     Auxiliary.allStock[allStockCounter] = animal;
-                    allStockCounter++;
                     jCowCounter++;
-                    
-                }
-                else
-                {
-                    Auxiliary.cows[genericCounter] = animal;
-                    Auxiliary.allStock[allStockCounter] = animal;
                     allStockCounter++;
-                    genericCounter++;
-                }
-            }//end of jersey cows and cows
-            genericCounter = 0;//reset counter
-            for (int j = 5000; j < (5000 + Auxiliary.dogCount) + 50; j++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
-            {
-                try
+                }//end of jersey cows
+                else if (animal.GetType() == typeof(Dog))
                 {
-                    animal = allAnimals[j];
-                }
-                catch (Exception)
+                    Auxiliary.dogs[dogCounter] = animal;
+                    dogCounter++;
+                }//end of dogs
+                else if (animal.GetType() == typeof(Goat))
                 {
-                    continue;
-                }
-                Auxiliary.dogs[genericCounter] = animal;
-                genericCounter++;
-            }//end of dogs
-            genericCounter = 0;
-            for (int k = 1101; k < (1101 + Auxiliary.goatCount) +50; k++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
-            {
-                try
+                    Auxiliary.goats[goatCounter] = animal;
+                    Auxiliary.allStock[allStockCounter] = animal;
+                    goatCounter++;
+                    allStockCounter++;
+                }//end of goats
+                else if (animal.GetType() == typeof(Sheep))
                 {
-                    animal = allAnimals[k];
-                }
-                catch (Exception)
-                {
-                    continue;
-                }
-                Auxiliary.goats[genericCounter] = animal;
-                Auxiliary.allStock[allStockCounter] = animal;
-                allStockCounter++;
-                genericCounter++;
-            }//end of goats
-            genericCounter = 0;
-            for (int l = 3001; l < (3001 + Auxiliary.sheepCount) + 50; l++)//+50 to create leverage for deleted animals from database (Not all ids were in order)
-            {
-                try
-                {
-                    animal = allAnimals[l];
-                }
-                catch (Exception)
-                {
-                    continue;
-                }
-                Auxiliary.sheep[genericCounter] = animal;
-                Auxiliary.allStock[allStockCounter] = animal;
-                allStockCounter++;
-                genericCounter++;
-            }//end of sheep loop reminder to add the id 0
-            Auxiliary.sheep[genericCounter] = allAnimals[0];//bad database design based on ID structure
-            Auxiliary.allStock[allStockCounter] = allAnimals[0];
+                    Auxiliary.sheep[sheepCounter] = animal;
+                    Auxiliary.allStock[allStockCounter] = animal;
+                    sheepCounter++;
+                    allStockCounter++;
+                }//end of sheep
+            }
+        }//end of SplitToArrays
 
+        /// <summary>
+        /// Sort allStock array by profitability using bubble sort
+        /// </summary>
+        public static void SortByProfit()
+        {
             //sort allStock array
             LiveStock tempStock;
             for (int i = 0; i < Auxiliary.allStock.Length; i++)
@@ -245,6 +233,6 @@ namespace AppDevAssignment
                     }
                 }
             }
-        }//end of initializeDatabase
+        } //end of SortByProfit
     }//end of class Database
 }//end of namespace

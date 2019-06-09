@@ -72,7 +72,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -143,40 +143,40 @@
             // individualReportLabel
             // 
             this.individualReportLabel.AutoSize = true;
-            this.individualReportLabel.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.individualReportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.individualReportLabel.Location = new System.Drawing.Point(79, 400);
             this.individualReportLabel.Name = "individualReportLabel";
-            this.individualReportLabel.Size = new System.Drawing.Size(105, 26);
+            this.individualReportLabel.Size = new System.Drawing.Size(176, 25);
             this.individualReportLabel.TabIndex = 5;
             this.individualReportLabel.Text = "Individual reports";
             // 
             // miscellaneousLabel
             // 
             this.miscellaneousLabel.AutoSize = true;
-            this.miscellaneousLabel.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.miscellaneousLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.miscellaneousLabel.Location = new System.Drawing.Point(367, 400);
             this.miscellaneousLabel.Name = "miscellaneousLabel";
-            this.miscellaneousLabel.Size = new System.Drawing.Size(125, 26);
+            this.miscellaneousLabel.Size = new System.Drawing.Size(223, 25);
             this.miscellaneousLabel.TabIndex = 6;
             this.miscellaneousLabel.Text = "Miscellaneous reports";
             // 
             // taxReportLabel
             // 
             this.taxReportLabel.AutoSize = true;
-            this.taxReportLabel.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taxReportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxReportLabel.Location = new System.Drawing.Point(90, 187);
             this.taxReportLabel.Name = "taxReportLabel";
-            this.taxReportLabel.Size = new System.Drawing.Size(74, 26);
+            this.taxReportLabel.Size = new System.Drawing.Size(121, 25);
             this.taxReportLabel.TabIndex = 7;
             this.taxReportLabel.Text = "Tax reports";
             // 
             // totalReportLabel
             // 
             this.totalReportLabel.AutoSize = true;
-            this.totalReportLabel.Font = new System.Drawing.Font("Bodoni MT Poster Compressed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalReportLabel.Location = new System.Drawing.Point(367, 187);
+            this.totalReportLabel.Font = new System.Drawing.Font("NSimSun", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalReportLabel.Location = new System.Drawing.Point(350, 194);
             this.totalReportLabel.Name = "totalReportLabel";
-            this.totalReportLabel.Size = new System.Drawing.Size(117, 26);
+            this.totalReportLabel.Size = new System.Drawing.Size(159, 15);
             this.totalReportLabel.TabIndex = 8;
             this.totalReportLabel.Text = "Profit/Loss reports";
             // 
