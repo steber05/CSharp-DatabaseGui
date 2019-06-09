@@ -243,7 +243,7 @@ namespace AppDevAssignment
 
             MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxiliary.animalCount.ToString() +
                             "\nNumber of red animals\n" + "-----------------------------\n" + amountOfRed.ToString() +
-                            "\nRed animal ratio\n" + "-----------------------------\n" + "%" + redRatio.ToString() + " of animals are red");
+                            "\nRed animal ratio\n" + "-----------------------------\n" + "%" + Math.Round(redRatio, 2).ToString() + " of animals are red");
         }//end of Task 9
 
         //Task 10 
@@ -293,7 +293,7 @@ namespace AppDevAssignment
 
             MessageBox.Show("Number of animals\n" + "-----------------------------\n" + Auxiliary.animalCount.ToString() +
                             "\nNumber of animals above the age of: " + num.ToString() + "\n" + "-----------------------------\n" + aboveAge.ToString() +
-                            "\nRatio\n-----------\n%" + ratio.ToString());
+                            "\nRatio\n-----------\n%" + Math.Round(ratio, 2).ToString());
         }//end of Task 11
 
         //Task 12 
