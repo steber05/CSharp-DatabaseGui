@@ -203,10 +203,11 @@ namespace AppDevAssignment
             {
                 using (StreamWriter writer = new StreamWriter(file.FileName))
                 {
-                    writer.WriteLine("ID ordered by profit (Highest to lowest)\n----------------------------------------");
+                    writer.WriteLine("ID ordered by profit (Highest to lowest)");
+                    writer.WriteLine("----------------------------------------");
                     for (int i = 0; i < Auxiliary.allStock.Length; i++)
                     {
-                        writer.Write(Auxiliary.allStock[i].id + "\n");
+                        writer.WriteLine(Auxiliary.allStock[i].id);
                     }
                 }
             }
