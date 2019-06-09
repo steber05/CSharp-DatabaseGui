@@ -19,7 +19,6 @@ namespace AppDevAssignment
 
         private void QueryButton_Click(object sender, EventArgs e)
         {
-            LiveStock animal;
             try
             {
                 TaskCode.IndividualReport(Convert.ToInt32(idTextBox.Text));
@@ -27,8 +26,8 @@ namespace AppDevAssignment
             catch (Exception)
             {
                 MessageBox.Show("Invalid ID!");
-                idTextBox.Text = "";
             }
+            idTextBox.Text = "";
         }
 
         private void IdTextBox_KeyPress(object sender, KeyPressEventArgs e)
